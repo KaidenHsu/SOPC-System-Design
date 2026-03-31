@@ -6,7 +6,7 @@ assignments for the SOPC System Design Course at NSYSU, Taiwan
 
  Hws   | Descriptions
 --------|:-----
-[Hw1][1]| Self Attention Software Golden Model
+[Hw1][1]| Self Attention C Golden Model
 [Hw2][2]|Vector-Matrix Multiplication IP Circuit
 
 [1]: hw1/
