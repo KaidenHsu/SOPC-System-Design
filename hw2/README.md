@@ -28,12 +28,12 @@ $ make M=M_SIZE N=N_SIZE
 
 ## File explanation
 
-* **hw2.v** is the top-level wrapper
-* **VMM.sv** is my design
-* **gen_rand.py**
+* **hw2.v** (top-level wrapper)
+* **VMM.sv** (accelerator IP)
+* **gen_rand.py** (simulation helper script)
     * generate a vector and a matrix of specified sizes
     * transpose and preprocess the matrix to fit the input of hardware (hardware-software co-design)
     * Calculate the correct answer, and write it to golden.mem
-* **hw2_tb.v** is the testbench
+* **hw2_tb.v** (testbench)
     * compare the result in the output OCB against that in golden.mem, and decide the output correctness
     * record the circuit runtime in cycles
