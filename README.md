@@ -1,13 +1,11 @@
 # SOPC DESIGN PRACTICE AND FPGA SYSTEM DESIGN (SOPC設計實務及FPGA系統整合設計)
 
-assignments for the SOPC System Design Course at NSYSU, Taiwan
-
 ## Homeworks
 
  Hws   | Descriptions
 --------|:-----
-[Hw1][1]| Self Attention C Golden Models
-[Hw2][2]|Vector-Matrix Multiplication IP Circuit
+[Hw1][1]| Self-Attention C Golden Models
+[Hw2][2]| Vector-Matrix Multiplication IP Circuit
 
 [1]: hw1/
 [2]: hw2/
