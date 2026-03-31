@@ -2,7 +2,7 @@
 
 ## Goal
 
-design an IP accelerator circuit that perfomrs vector-matrix multiplication
+design an IP accelerator circuit that performs vector-matrix multiplication
 
 ## Requirements
 
@@ -14,7 +14,7 @@ design an IP accelerator circuit that perfomrs vector-matrix multiplication
 
 1. change Verilator to the simulation tool of your choice
 2. remember to pass agguments to M_SIZE and N_SIZE in the Makefile to the design (-D<define_name>=argument for Verilator)
-3. enable SystemVerilog compilation if needed (--sv for Verilator)
+3. enable SystemVerilog compilation (--sv for Verilator)
 
 ``` bash
 $ make # defaults to M=16, N=3
@@ -28,13 +28,12 @@ $ make M=M_SIZE N=N_SIZE
 
 ## File explanation
 
-* hw2.v is the top-level wrapper
-* VMM.sv is my design
-* gen_rand.py
+* **hw2.v** is the top-level wrapper
+* **VMM.sv*I is my design
+* **gen_rand.py**
     * generate a vector and a matrix of specified sizes
     * transpose and preprocess the matrix to fit the input of hardware (hardware-software co-design)
     * Calculate the correct answer, and write it to golden.mem
-* hw2_tb.v is the testbench
+* **hw2_tb.v** is the testbench
     * compare the result in the output OCB against that in golden.mem, and decide the output correctness
     * record the circuit runtime in cycles
-
