@@ -6,8 +6,10 @@ assignments for the SOPC System Design Course at NSYSU, Taiwan
 
  Hws   | Descriptions
 --------|:-----
-[Hw2][1]|Vector-Matrix Multiplication IP Circuit
+[Hw1][1]|Vector-Matrix Multiplication, Matrix-Matrix Multiplication, Self-Attention Software Golden Models
+[Hw2][2]|Vector-Matrix Multiplication IP Circuit
 
-[1]: hw2/
+[1]: hw1/
+[2]: hw2/
 
 <p align="center"><img src="images/zedboard.png" alt="Zedboard" width="480" /></p>
