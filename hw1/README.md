@@ -1,4 +1,4 @@
-# Hw1. Self Attention C Golden Model
+# Hw1. Self Attention C Golden Models
 
 ## Goal
 
