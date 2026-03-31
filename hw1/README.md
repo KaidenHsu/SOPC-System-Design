@@ -1,8 +1,8 @@
-# Hw1. Self Attention Software Golden Model
+# Hw1. Self Attention C Golden Model
 
 ## Goal
 
-write the golden software models for VMM, GVM, GMM, SATT and plug SATT in an LLM
+write the C golden models for VMM, GVM, GMM, SATT, and plug SATT in an LLM to verify the correctness
 
 ## Requirements
 
