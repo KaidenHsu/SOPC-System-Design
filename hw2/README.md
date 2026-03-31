@@ -2,7 +2,7 @@
 
 ## Goal
 
-design an IP accelerator circuit that performs vector-matrix multiplication
+design an IP acceleration circuit that performs vector-matrix multiplication
 
 ## Requirements
 
@@ -29,7 +29,7 @@ $ make M=M_SIZE N=N_SIZE
 ## File explanation
 
 * **hw2.v** is the top-level wrapper
-* **VMM.sv*I is my design
+* **VMM.sv** is my design
 * **gen_rand.py**
     * generate a vector and a matrix of specified sizes
     * transpose and preprocess the matrix to fit the input of hardware (hardware-software co-design)
