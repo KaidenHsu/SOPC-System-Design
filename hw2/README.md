@@ -25,3 +25,16 @@ $ make M=M_SIZE N=N_SIZE
 # specify dimensions (1xM) vector x (MxN) matrix
 # M = 16, 32, or 48, 0 < N < 64
 ```
+
+## File explanation
+
+* hw2.v is the top-level wrapper
+* VMM.sv is my design
+* gen_rand.py
+    * generate a vector and a matrix of specified sizes
+    * transpose and preprocess the matrix to fit the input of hardware (hardware-software co-design)
+    * Calculate the correct answer, and write it to golden.mem
+* hw2_tb.v is the testbench
+    * compare the result in the output OCB against that in golden.mem, and decide the output correctness
+    * record the circuit runtime in cycles
+
