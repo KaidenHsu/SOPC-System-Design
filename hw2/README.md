@@ -1,5 +1,11 @@
 # Hw2. Vector-Matrix Multiplication Accelerator IP Circuit
 
+## Goal
+
+design an IP accelerator circuit that perfomrs vector-matrix multiplication
+
+## Requirements
+
 * at least 16 multiplier units
 * vector and matrix sizes must be configurable via input
 * input vectors and matrices are stored in OCB
@@ -15,5 +21,7 @@ $ make # defaults to M=16, N=3
 ```
 
 ``` bash
-$ make M=<16/32/48> N=<(0, 63)> # specify dimensions (1xM) vector x (MxN) matrix
+$ make M=M_SIZE N=N_SIZE
+# specify dimensions (1xM) vector x (MxN) matrix
+# M = 16, 32, or 48, 0 < N < 64
 ```
