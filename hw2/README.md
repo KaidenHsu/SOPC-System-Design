@@ -1,11 +1,14 @@
 # Hw2. Vector-Matrix Multiplication Accelerator IP Circuit
 
-<p align="center"><img src="images/timing.png" alt="timing" width="480" /></p>
-<p align="center"><img src="images/utilization.png" alt="utilization" width="480" /></p>
-<p align="center"><img src="images/circuit_diagram.png" alt="circuit diagram" width="480" /></p>
-<p align="center"><img src="images/block_diagram.png" alt="block diagram" width="480" /></p>
-<p align="center"><img src="images/timing_diagram.png" alt="timing diagram" width="480" /></p>
-<p align="center"><img src="images/FSM.png" alt="FSM" width="480" /></p>
+<table>
+    <tr>
+        <td align="center"><img src="images/timing.png" alt="timing" width="480" /></td>
+        <td align="center"><img src="images/utilization.png" alt="utilization" width="480" /></td>
+    </tr>
+</table>
+<p align="center"><img src="images/circuit_diagram.png" alt="circuit diagram" width="720" /></p>
+<p align="center"><img src="images/timing_diagram.png" alt="timing diagram" width="720" /></p>
+<p align="center"><img src="images/FSM.png" alt="FSM" width="720" /></p>
 
 ## Goal
 
