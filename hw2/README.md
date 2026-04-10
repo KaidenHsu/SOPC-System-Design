@@ -1,5 +1,12 @@
 # Hw2. Vector-Matrix Multiplication Accelerator IP Circuit
 
+<p align="center"><img src="images/timing.png" alt="timing" width="480" /></p>
+<p align="center"><img src="images/utilization.png" alt="utilization" width="480" /></p>
+<p align="center"><img src="images/circuit_diagram.png" alt="circuit diagram" width="480" /></p>
+<p align="center"><img src="images/block_diagram.png" alt="block diagram" width="480" /></p>
+<p align="center"><img src="images/timing_diagram.png" alt="timing diagram" width="480" /></p>
+<p align="center"><img src="images/FSM.png" alt="FSM" width="480" /></p>
+
 ## Goal
 
 design an IP acceleration circuit that performs vector-matrix multiplication
