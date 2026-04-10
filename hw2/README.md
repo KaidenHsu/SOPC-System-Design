@@ -1,8 +1,8 @@
 # Hw2. Vector-Matrix Multiplication Accelerator IP Circuit
 
 <p align="center">
-    <img src="images/timing.png" alt="timing" width="480" align="top" />
-    <img src="images/utilization.png" alt="utilization" width="480" align="top" />
+    <img src="images/timing.png" alt="timing" width="480" align="middle" />
+    <img src="images/utilization.png" alt="utilization" width="480" align="middle" />
 </p>
 <p align="center"><img src="images/circuit_diagram.png" alt="circuit diagram" width="600" /></p>
 <p align="center"><img src="images/FSM.png" alt="FSM" width="600" /></p>
