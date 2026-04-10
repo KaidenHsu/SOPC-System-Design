@@ -1,16 +1,19 @@
 # Hw2. Vector-Matrix Multiplication Accelerator IP Circuit
 
+## Timing and Utilization on Zedboard
 <p align="center">
     <img src="images/timing.png" alt="timing" width="480" align="middle" />
     <img src="images/utilization.png" alt="utilization" width="480" align="middle" />
 </p>
-▲ timing and utilization on Zedboard
+
+## Circuit Diagram
 <p align="center"><img src="images/circuit_diagram.png" alt="circuit diagram" width="600" /></p>
-▲ circuit diagram
+
+## FSM
 <p align="center"><img src="images/FSM.png" alt="FSM" width="600" /></p>
-▲ FSM
+
+## Timing Diagram
 <p align="center"><img src="images/timing_diagram.png" alt="timing diagram" width="720" /></p>
-<center>▲ timing diagram</center>
 
 
 ## Goal
