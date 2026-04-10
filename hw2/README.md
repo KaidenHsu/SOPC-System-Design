@@ -10,7 +10,8 @@
 <p align="center"><img src="images/FSM.png" alt="FSM" width="600" /></p>
 ▲ FSM
 <p align="center"><img src="images/timing_diagram.png" alt="timing diagram" width="720" /></p>
-▲ timing diagram
+<p style="text-align: center;">▲ timing diagram</p>
+
 
 ## Goal
 
