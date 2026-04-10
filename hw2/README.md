@@ -6,6 +6,9 @@
     <img src="images/utilization.png" alt="utilization" width="480" align="middle" />
 </p>
 
+* **Timing:** Achieved timing closure with **WNS (Worst Negative Slack) = 0.411 ns**.
+* **Utilization:** Highly optimized datapath logic using only **LUT: 1.71%** and **FF: 0.53%**.
+
 ## Circuit Diagram
 <p align="center"><img src="images/circuit_diagram.png" alt="circuit diagram" width="600" /></p>
 
