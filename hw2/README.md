@@ -1,6 +1,7 @@
 # Hw2. Vector-Matrix Multiplication Accelerator IP Circuit
 
 ## Timing and Utilization on Zedboard
+
 <p align="center">
     <img src="images/timing.png" alt="timing" width="480" align="middle" />
     <img src="images/utilization.png" alt="utilization" width="480" align="middle" />
@@ -10,18 +11,20 @@
 * **Utilization:** Highly optimized datapath logic using only **LUT: 1.71%** and **FF: 0.53%**.
 
 ## Circuit Diagram
+
 <p align="center"><img src="images/circuit_diagram.png" alt="circuit diagram" width="600" /></p>
 
 ## FSM
+
 <p align="center"><img src="images/FSM.png" alt="FSM" width="600" /></p>
 
 ## Timing Diagram
-<p align="center"><img src="images/timing_diagram.png" alt="timing diagram" width="720" /></p>
 
+<p align="center"><img src="images/timing_diagram.png" alt="timing diagram" width="720" /></p>
 
 ## Goal
 
-design an IP acceleration circuit that performs vector-matrix multiplication
+design an accelerator IP circuit that performs vector-matrix multiplication
 
 ## Requirements
 
