@@ -1,4 +1,4 @@
-# SOPC DESIGN PRACTICE AND FPGA SYSTEM DESIGN (SOPC設計實務及FPGA系統整合設計)
+# SOPC Design Practice And FPGA System Design
 
 ## Homeworks
 
