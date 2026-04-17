@@ -5,12 +5,12 @@
 ### 1.1 Block Diagram
 
 <p align="center">
-    <img src="images/hw3_1_FPGA_TOP.jpg" alt="timing" width="480" align="middle" />
-    <img src="images/hw3_1_MYIP_TOP.jpg" alt="timing" width="480" align="middle" />
+    <img src="images/Hw3_1_FPGA_TOP.jpg" alt="timing" width="480" align="middle" />
+    <img src="images/Hw3_1_MYIP_TOP.jpg" alt="timing" width="480" align="middle" />
 </p>
 <p align="center">
-    <img src="images/hw3_1_AHBMA_IX.jpg" alt="timing" width="480" align="middle" />
-    <img src="images/hw3_1_APB_IX.jpg" alt="timing" width="480" align="middle" />
+    <img src="images/Hw3_1_AHBMA_IX.jpg" alt="timing" width="480" align="middle" />
+    <img src="images/Hw3_1_APB_IX.jpg" alt="timing" width="480" align="middle" />
 </p>
 
 ### 1.2 Design Description
@@ -30,7 +30,7 @@
 
 ### 2.2 Circuit Diagram
 
-<img src="images/hw3_2_circuit_diagram.jpg" alt="timing" width="480" align="middle" />
+<img src="images/Hw3_2_circuit_diagram.jpg" alt="timing" width="480" align="middle" />
 
 ### 2.3 Design Description
 
