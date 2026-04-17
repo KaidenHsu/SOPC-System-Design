@@ -43,3 +43,12 @@ You are required to trace the code of a RGB-YUV conversion IP originally used in
 * **Byte-Enable Logic:** Utilizes the `WSTRB` (Write Strobe) signal to update specific bytes individually, preventing the master from unnecessarily overwriting the entire 32-bit register[cite: 177, 264, 265].
 * **Read Transactions:** Latches the requested address when `ARVALID` is high, decodes the target register, and returns the payload via `RDATA`.
 * **Address Alignment:** Filters out the lower address bits that represent the byte offset using the `ADDR_LSB` parameter, ensuring proper word-aligned register selection.
+
+### 2.4 Register Map
+
+| Register | Hex Offset | bit[4:0] |
+|---|---|---|
+| slv_reg0 | 0x00 | 00000 |
+| slv_reg1 | 0x08 | 01000 |
+| slv_reg2 | 0x10 | 10000 |
+| slv_reg3 | 0x18 | 11000 |
