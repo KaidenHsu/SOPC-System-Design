@@ -17,7 +17,7 @@ You are required to trace the code of a RGB-YUV conversion IP originally used in
 
 ### 1.2 Design Description
 
-<img src="images/Hw3_2_circuit_diagram.jpg" alt="timing" width="840" align="middle" />
+<img src="images/Hw3_1_RGB_YUV_formula.png" alt="timing" width="840" align="middle" />
 
 * **Core Function:** Performs RGB to YUV conversion using a pre-defined hardware transformation matrix.
 * **PPA Optimization:** Employs 1024x scaling and top-bit extraction, allowing the synthesizer to replace costly hardware multipliers with simple 10-bit logical left-shifts to improve area and power efficiency[cite: 166].
