@@ -46,6 +46,8 @@ You are required to trace the code of a RGB-YUV conversion IP originally used in
 
 ### 2.4 Register Map
 
+if **C_S_AXI_DATA_WIDTH = 64**:
+
 | Register | Hex Offset | bit[4:0] |
 |---|---|---|
 | slv_reg0 | 0x00 | 00000 |
