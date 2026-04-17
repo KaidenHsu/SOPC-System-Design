@@ -34,6 +34,8 @@ You are required to trace the code of a RGB-YUV conversion IP originally used in
 
 ### 2.2 Circuit Diagram
 
+when parameter **C_S_AXI_DATA_WIDTH** is set to 32:
+
 <img src="images/Hw3_2_circuit_diagram.jpg" alt="timing" width="480" align="middle" />
 
 ### 2.3 Design Description
@@ -46,7 +48,7 @@ You are required to trace the code of a RGB-YUV conversion IP originally used in
 
 ### 2.4 Register Map
 
-if parameter **C_S_AXI_DATA_WIDTH** is set to 64:
+when parameter **C_S_AXI_DATA_WIDTH** is set to 64:
 
 | Register | Hex Offset | bit[4:0] |
 |---|---|---|
