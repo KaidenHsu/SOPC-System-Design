@@ -1,4 +1,6 @@
-# Hw3. Code Trace: RGB-YUV AMBA 2.0 Conversion IP, AXI-Lite Wrapper
+# Hw3. RGB-YUV AMBA 2.0 Conversion IP, AXI-Lite Wrapper
+
+You are required to trace the code of a RGB-YUV conversion IP originally used in SoC development, and an AXI-Lite Wrapper. This assignment focuses on the handshaking protocal between masters and slaves.
 
 ## Task 1: RGB-YUV AMBA 2.0 Conversion IP
 
