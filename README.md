@@ -1,8 +1,10 @@
 # SOPC Design Practice And FPGA System Design
 
-## Homeworks
+homework for "SOPC Design Practice and FPGA System Design (2026 Spring)" in NSYSU, Taiwan
 
- Hws   | Descriptions
+## Homework
+
+ Homework | Descriptions
 --------|:-----
 [Hw1][1]| Self-Attention C Golden Models
 [Hw2][2]| Vector-Matrix Multiplication IP Circuit
