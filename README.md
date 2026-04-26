@@ -4,7 +4,7 @@ homework for "SOPC Design Practice and FPGA System Design (2026 Spring)" in NSYS
 
 ## Homework
 
- Homework | Descriptions
+ Homework | Description
 --------|:-----
 [Hw1][1]| Self-Attention C Golden Models
 [Hw2][2]| Vector-Matrix Multiplication IP Circuit
