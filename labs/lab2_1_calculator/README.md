@@ -26,6 +26,7 @@
 
 <img src="images/slave_block_diagram.png" alt="slave block diagram" width="840" align="middle" />
 ▲ System Block Diagram
+<br />
 <img src="images/calculator_interface.png" alt="calucaltor interface" width="840" align="middle" />
 ▲ Calculator Circuit Interface
 
