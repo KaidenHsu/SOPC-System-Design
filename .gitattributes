@@ -21,3 +21,29 @@
 **/*.jou linguist-generated=true
 **/*.log linguist-generated=true
 **/*.str linguist-generated=true
+
+# -----------------------------------------------------------
+# Xilinx SDK Generated Directories
+# -----------------------------------------------------------
+# The Hardware Platform contains generated HTML docs, XML, and init C code.
+**/*_hw_platform_*/** linguist-generated=true
+
+# The Board Support Package (BSP) contains massive Xilinx C/Assembly drivers.
+**/*_bsp/** linguist-generated=true
+
+# SDK Debug/Release build directories
+**/*.sdk/**/Debug/** linguist-generated=true
+**/*.sdk/**/Release/** linguist-generated=true
+
+# -----------------------------------------------------------
+# Global Extension Overrides (Cleans up the chart)
+# -----------------------------------------------------------
+# Ignore all generated documentation, scripts, and startup assembly
+*.html linguist-generated=true
+*.tcl linguist-generated=true
+*.S linguist-generated=true
+*.s linguist-generated=true
+
+# Force specific Xilinx constraint files to be treated as text/XML if needed,
+# to prevent misclassification (fixes the "SuperCollider" anomaly)
+*.xdc linguist-generated=true
