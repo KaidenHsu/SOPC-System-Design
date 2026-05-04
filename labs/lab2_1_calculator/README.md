@@ -1,14 +1,35 @@
 # Lab 2.2 Calculator AXI-Lite Slave IP System
 
-## 1. Slave IP and System Design
+## 1. Steps
 
-<p align="center"><img src="images/slave_block_diagram.png" alt="slave block diagram" width="720" align="middle" /></p>
-<p align="center"><img src="images/calculator_interface.png" alt="calucaltor interface" width="720" align="middle" /></p>
+1. Create and Edit Slave IP
+    * create an AXI4 peripheral in IP intergrator
+    * add Calculator.v to source
+    * edit AXI wrapper
+    * re-package IP in IP wizard
+2. Create Hardware IP
+    * add ZYNQ-7000 PS, calculator IP to block design
+    * run block, connection automation wizards
+    * add ILA core
+    * create HDL wrapper
+3. Execute in SDK
+    * identify IP base address in `system.hdf`
+    * modify `helloworld.c` to test our calculator slave IP
+    * program to board and check execution result
+4. Debug in Vivado
+    * setup trigger in ILA Debugger
+    * launch hardware (system debugger) in SDK
+    * check ILA capture result
 
-## 2. ILA debugger
+## 2. Slave IP and System Design
 
-<p align="center"><img src="images/ILA.png" alt="ILA" width="720" align="middle" /></p>
+<p align="center"><img src="images/slave_block_diagram.png" alt="slave block diagram" width="840" align="middle" /></p>
+<p align="center"><img src="images/calculator_interface.png" alt="calucaltor interface" width="840" align="middle" /></p>
 
-## 3. Demo
+## 3. ILA debugger
+
+<p align="center"><img src="images/ILA.png" alt="ILA" width="840" align="middle" /></p>
+
+## 4. Demo
 
 <p align="center"><img src="images/demo.png" alt="demo" width="480" align="middle" /></p>
