@@ -1,7 +1,7 @@
 # SOPC Design Practice And FPGA System Design
 
 * homework and labs for "SOPC Design Practice and FPGA System Design (2026 Spring)" in NSYSU, Taiwan
-* implementation platform: AMD Xilinx Vivado 2018.3
+* implementation platform: Vivado HLx 2018.3, Zedboard
 
 ## Homework
 

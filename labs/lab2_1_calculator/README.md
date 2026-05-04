@@ -21,6 +21,10 @@
     * launch hardware (system debugger) in SDK
     * check ILA capture result
 5. Exercise: Add a Second Slave IP in a Separate Address Space (Part 1.4)
+    * instantiate two calculator IP slaves
+    * configure AXI interconnect so it accepts two slaves
+    * identify the two IPs' base addresses in SDK `system.hdf`
+    * program device, run firmware and check result
 
 ## 2. Slave IP and System Design
 
@@ -42,3 +46,11 @@
 
 <img src="images/demo.png" alt="demo" width="480" align="middle" />
 ▲ SDK Execution
+
+## 5. Exercise: Add a Second Slave IP in a Separate Address Space
+
+<img src="images/two_slaves_block_design.png" alt="two slaves block design" width="840" align="middle" />
+▲ Two Slaves Block Design
+
+<img src="images/two_slaves_demo.png" alt="two slaves demo" width="480" align="middle" />
+▲ Two Slaves Demo
