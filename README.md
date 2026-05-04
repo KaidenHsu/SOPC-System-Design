@@ -7,9 +7,9 @@
 
  Homework | Description
 --------|:-----
-[Hw1][1.1]| Self-Attention C Golden Models
-[Hw2][1.2]| Vector-Matrix Multiplication IP Circuit
-[Hw3][1.3]| RGB-YUV AMBA 2.0 Conversion IP, AXI-Lite Wrapper
+[Hw 1][1.1]| Self-Attention C Golden Models
+[Hw 2][1.2]| Vector-Matrix Multiplication IP Circuit
+[Hw 3][1.3]| RGB-YUV AMBA 2.0 Conversion IP, AXI-Lite Wrapper
 
 [1.1]: hws/hw1/
 [1.2]: hws/hw2/
@@ -19,8 +19,8 @@
 
 Homework | Description
 --------|:--------
-[Lab1-2][2.1.2]| SDK
-[Lab2-1][2.2.1]| Calculator AXI-Lite Slave IP System
+[Lab 1-2][2.1.2]| SDK
+[Lab 2-1][2.2.1]| Calculator AXI-Lite Slave IP System
 
 [2.1.1]: labs/lab1_2_sdk
 [2.2.1]: labs/lab2_1_calculator/
