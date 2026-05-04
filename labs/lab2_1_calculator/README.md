@@ -24,18 +24,21 @@
 
 ## 2. Slave IP and System Design
 
+<img src="images/calculator_interface.png" alt="calucaltor interface" width="840" align="middle" />
+▲ Calculator Circuit Interface
+
 <img src="images/slave_block_diagram.png" alt="slave block diagram" width="840" align="middle" />
 ▲ System Block Diagram
 
-<img src="images/calculator_interface.png" alt="calucaltor interface" width="840" align="middle" />
-▲ Calculator Circuit Interface
+<img src="images/vivado_block_design.png" alt="vivado block design" width="840" align="middle" />
+▲ Vivado Block Design
 
 ## 3. ILA debugger
 
 <img src="images/ILA.png" alt="ILA" width="840" align="middle" />
-▲ ILA capture in Vivado
+▲ ILA Capture in Vivado
 
 ## 4. Demo
 
 <img src="images/demo.png" alt="demo" width="480" align="middle" />
-▲ SDK Execution in SDK
+▲ SDK Execution
