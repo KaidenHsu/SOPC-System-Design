@@ -23,6 +23,6 @@ Homework | Description
 [Lab2-1][2.2.1]| Calculator AXI-Lite Slave IP System
 
 [2.1.1]: labs/lab1_2_sdk
-[2.1.2]: labs/lab2_1_calculator
+[2.2.1]: labs/lab2_1_calculator/
 
 <p align="center"><img src="images/zedboard.png" alt="Zedboard" width="480" /></p>
