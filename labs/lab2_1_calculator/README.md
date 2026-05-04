@@ -4,7 +4,7 @@
 
 1. Create and Edit Slave IP
     * create an AXI4 peripheral in IP intergrator
-    * add Calculator.v to source
+    * add `Calculator.v` to source
     * edit AXI wrapper
     * re-package IP in IP wizard
 2. Create Hardware IP
@@ -20,6 +20,7 @@
     * setup trigger in ILA Debugger
     * launch hardware (system debugger) in SDK
     * check ILA capture result
+5. Exercise: Add a Second Slave IP in a Separate Address Space
 
 ## 2. Slave IP and System Design
 
