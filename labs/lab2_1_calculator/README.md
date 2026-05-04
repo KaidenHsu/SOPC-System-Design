@@ -53,4 +53,4 @@
 ▲ Two Slaves Block Design
 
 <img src="images/two_slaves_demo.png" alt="two slaves demo" width="480" align="middle" />
-▲ Two Slaves Demo
+▲ Two Slaves SDK Execution
