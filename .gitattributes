@@ -22,6 +22,8 @@
 **/*.log linguist-generated=true
 **/*.str linguist-generated=true
 
+
+
 # -----------------------------------------------------------
 # Xilinx SDK Generated Directories
 # -----------------------------------------------------------
@@ -44,6 +46,13 @@
 *.S linguist-generated=true
 *.s linguist-generated=true
 
-# Force specific Xilinx constraint files to be treated as text/XML if needed,
-# to prevent misclassification (fixes the "SuperCollider" anomaly)
-*.xdc linguist-generated=true
+# -----------------------------------------------------------
+# Remove Linker Scripts and False Positives
+# -----------------------------------------------------------
+# Ignore the SDK-generated bare-metal linker scripts (lscript.ld)
+*.ld linguist-generated=true
+
+# Force GitHub to ignore files it misidentifies as SuperCollider 
+# (typically SystemC or Vivado intermediate .sc files)
+*.sc linguist-generated=true
+*.scd linguist-generated=true
