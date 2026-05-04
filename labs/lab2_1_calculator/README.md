@@ -2,7 +2,7 @@
 
 ## 1. Steps
 
-1. Create and Edit Slave IP (Part 1.1)**
+1. **Create and Edit Slave IP (Part 1.1)**
     * create an AXI4 peripheral in IP intergrator
     * add `Calculator.v` to source
     * edit AXI wrapper
