@@ -2,7 +2,7 @@
 
 ## 1. Steps
 
-1. **Create and Edit Slave IP**
+1. **Create and Edit Master IP**
     * create an AXI4 peripheral in IP intergrator
     * edit AXI wrapper
     * re-package IP in IP wizard
