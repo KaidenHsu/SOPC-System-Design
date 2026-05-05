@@ -17,7 +17,7 @@
 
 ## Labs
 
-Homework | Description
+Labs | Description
 --------|:--------
 [Lab 1-2][2.1.1]| SDK
 [Lab 2-1][2.2.1]| Calculator AXI-Lite Slave IP System
