@@ -37,15 +37,30 @@
 <img src="images/vivado_block_design.png" alt="vivado block design" width="840" align="middle" />
 ▲ Vivado Block Design
 
-## 3. ILA debugger
+## 3. Application Program (Firmware)
 
-<img src="images/ILA.png" alt="ILA" width="840" align="middle" />
-▲ ILA Capture in Vivado
+``` C
+volatile int *pointer = (int*)0x43c00000;
 
-## 4. Demo
+printf("Test the function of ADD\n");
+// select signal
+pointer[slv_reg0] = 0;
+// operands
+pointer[slv_reg1] = 100;
+pointer[slv_reg2] = 200;
+
+printf("data_in1 = %d\n", pointer[1]);
+printf("data_in2 = %d\n", pointer[2]);
+printf("The ADD result is %d\n", pointer[3]);
+printf("--------------------------\n");
+```
 
 <img src="images/demo.png" alt="demo" width="480" align="middle" />
 ▲ SDK Execution
+
+## 4. ILA debugger
+<img src="images/ILA.png" alt="ILA" width="840" align="middle" />
+▲ ILA Capture in Vivado
 
 ## 5. Exercise: Add a Second Slave IP in a Separate Address Space
 
