@@ -1,0 +1,355 @@
+22:41:41 INFO  : Registering command handlers for SDK TCF services
+22:41:41 INFO  : Launching XSCT server: xsct.bat -interactive C:\Users\ryanh\fpga\sopc\lab2_led\lab2_led.sdk\temp_xsdb_launch_script.tcl
+22:41:42 INFO  : XSCT server has started successfully.
+22:41:42 INFO  : Successfully done setting XSCT server connection channel  
+22:41:42 INFO  : Successfully done setting SDK workspace  
+22:41:42 INFO  : Processing command line option -hwspec C:/Users/ryanh/fpga/sopc/lab2_led/lab2_led.sdk/Lab2_led_wrapper.hdf.
+22:52:58 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:52:59 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248BE0D1E" && level==0} -index 1' command is executed.
+22:53:01 INFO  : FPGA configured successfully with bitstream "C:/Users/ryanh/fpga/sopc/lab2_led/lab2_led.sdk/Lab2_led_wrapper_hw_platform_0/Lab2_led_wrapper.bit"
+22:53:14 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248BE0D1E" && level==0} -index 1' command is executed.
+22:53:14 INFO  : 'fpga -state' command is executed.
+22:53:14 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:53:14 INFO  : Jtag cable 'Digilent Zed 210248BE0D1E' is selected.
+22:53:14 INFO  : 'jtag frequency' command is executed.
+22:53:14 INFO  : Sourcing of 'C:/Users/ryanh/fpga/sopc/lab2_led/lab2_led.sdk/Lab2_led_wrapper_hw_platform_0/ps7_init.tcl' is done.
+22:53:14 INFO  : Context for 'APU' is selected.
+22:53:14 INFO  : Hardware design information is loaded from 'C:/Users/ryanh/fpga/sopc/lab2_led/lab2_led.sdk/Lab2_led_wrapper_hw_platform_0/system.hdf'.
+22:53:14 INFO  : 'configparams force-mem-access 1' command is executed.
+22:53:14 INFO  : Context for 'APU' is selected.
+22:53:14 INFO  : 'stop' command is executed.
+22:53:14 INFO  : 'ps7_init' command is executed.
+22:53:14 INFO  : 'ps7_post_config' command is executed.
+22:53:14 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:53:15 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+22:53:15 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:53:15 INFO  : The application 'C:/Users/ryanh/fpga/sopc/lab2_led/lab2_led.sdk/Lab2_led_sdk/Debug/Lab2_led_sdk.elf' is downloaded to processor 'ps7_cortexa9_0'.
+22:53:15 INFO  : 'configparams force-mem-access 0' command is executed.
+22:53:15 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/ryanh/fpga/sopc/lab2_led/lab2_led.sdk/Lab2_led_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zed 210248BE0D1E"} -index 0
+loadhw -hw C:/Users/ryanh/fpga/sopc/lab2_led/lab2_led.sdk/Lab2_led_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zed 210248BE0D1E"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248BE0D1E"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248BE0D1E"} -index 0
+dow C:/Users/ryanh/fpga/sopc/lab2_led/lab2_led.sdk/Lab2_led_sdk/Debug/Lab2_led_sdk.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+22:53:15 INFO  : Memory regions updated for context APU
+22:53:15 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:53:15 INFO  : 'con' command is executed.
+22:53:15 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248BE0D1E"} -index 0
+con
+----------------End of Script----------------
+
+22:53:15 INFO  : Launch script is exported to file 'C:\Users\ryanh\fpga\sopc\lab2_led\lab2_led.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_lab2_led_sdk.elf_on_local.tcl'
+22:56:19 INFO  : Disconnected from the channel tcfchan#1.
+22:56:20 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248BE0D1E" && level==0} -index 1' command is executed.
+22:56:20 INFO  : 'fpga -state' command is executed.
+22:56:20 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:56:21 INFO  : Jtag cable 'Digilent Zed 210248BE0D1E' is selected.
+22:56:21 INFO  : 'jtag frequency' command is executed.
+22:56:21 INFO  : Sourcing of 'C:/Users/ryanh/fpga/sopc/lab2_led/lab2_led.sdk/Lab2_led_wrapper_hw_platform_0/ps7_init.tcl' is done.
+22:56:21 INFO  : Context for 'APU' is selected.
+22:56:22 INFO  : Hardware design information is loaded from 'C:/Users/ryanh/fpga/sopc/lab2_led/lab2_led.sdk/Lab2_led_wrapper_hw_platform_0/system.hdf'.
+22:56:22 INFO  : 'configparams force-mem-access 1' command is executed.
+22:56:22 INFO  : Context for 'APU' is selected.
+22:56:22 INFO  : 'stop' command is executed.
+22:56:22 INFO  : 'ps7_init' command is executed.
+22:56:22 INFO  : 'ps7_post_config' command is executed.
+22:56:22 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:56:22 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+22:56:22 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:56:22 INFO  : The application 'C:/Users/ryanh/fpga/sopc/lab2_led/lab2_led.sdk/Lab2_led_sdk/Debug/Lab2_led_sdk.elf' is downloaded to processor 'ps7_cortexa9_0'.
+22:56:22 INFO  : 'configparams force-mem-access 0' command is executed.
+22:56:22 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/ryanh/fpga/sopc/lab2_led/lab2_led.sdk/Lab2_led_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zed 210248BE0D1E"} -index 0
+loadhw -hw C:/Users/ryanh/fpga/sopc/lab2_led/lab2_led.sdk/Lab2_led_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zed 210248BE0D1E"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248BE0D1E"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248BE0D1E"} -index 0
+dow C:/Users/ryanh/fpga/sopc/lab2_led/lab2_led.sdk/Lab2_led_sdk/Debug/Lab2_led_sdk.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+22:56:22 INFO  : Memory regions updated for context APU
+22:56:22 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:56:22 INFO  : 'con' command is executed.
+22:56:22 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248BE0D1E"} -index 0
+con
+----------------End of Script----------------
+
+22:56:22 INFO  : Launch script is exported to file 'C:\Users\ryanh\fpga\sopc\lab2_led\lab2_led.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_lab2_led_sdk.elf_on_local.tcl'
+22:58:34 INFO  : Disconnected from the channel tcfchan#2.
+22:58:35 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248BE0D1E" && level==0} -index 1' command is executed.
+22:58:35 INFO  : 'fpga -state' command is executed.
+22:58:35 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:58:35 INFO  : Jtag cable 'Digilent Zed 210248BE0D1E' is selected.
+22:58:35 INFO  : 'jtag frequency' command is executed.
+22:58:35 INFO  : Sourcing of 'C:/Users/ryanh/fpga/sopc/lab2_led/lab2_led.sdk/Lab2_led_wrapper_hw_platform_0/ps7_init.tcl' is done.
+22:58:35 INFO  : Context for 'APU' is selected.
+22:58:36 INFO  : Hardware design information is loaded from 'C:/Users/ryanh/fpga/sopc/lab2_led/lab2_led.sdk/Lab2_led_wrapper_hw_platform_0/system.hdf'.
+22:58:36 INFO  : 'configparams force-mem-access 1' command is executed.
+22:58:36 INFO  : Context for 'APU' is selected.
+22:58:36 INFO  : 'stop' command is executed.
+22:58:36 INFO  : 'ps7_init' command is executed.
+22:58:36 INFO  : 'ps7_post_config' command is executed.
+22:58:36 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:58:36 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+22:58:36 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:58:36 INFO  : The application 'C:/Users/ryanh/fpga/sopc/lab2_led/lab2_led.sdk/Lab2_led_sdk/Debug/Lab2_led_sdk.elf' is downloaded to processor 'ps7_cortexa9_0'.
+22:58:36 INFO  : 'configparams force-mem-access 0' command is executed.
+22:58:36 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/ryanh/fpga/sopc/lab2_led/lab2_led.sdk/Lab2_led_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zed 210248BE0D1E"} -index 0
+loadhw -hw C:/Users/ryanh/fpga/sopc/lab2_led/lab2_led.sdk/Lab2_led_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zed 210248BE0D1E"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248BE0D1E"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248BE0D1E"} -index 0
+dow C:/Users/ryanh/fpga/sopc/lab2_led/lab2_led.sdk/Lab2_led_sdk/Debug/Lab2_led_sdk.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+22:58:36 INFO  : Memory regions updated for context APU
+22:58:36 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:58:36 INFO  : 'con' command is executed.
+22:58:36 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248BE0D1E"} -index 0
+con
+----------------End of Script----------------
+
+22:58:36 INFO  : Launch script is exported to file 'C:\Users\ryanh\fpga\sopc\lab2_led\lab2_led.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_lab2_led_sdk.elf_on_local.tcl'
+22:58:45 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:58:45 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248BE0D1E" && level==0} -index 1' command is executed.
+22:58:48 INFO  : FPGA configured successfully with bitstream "C:/Users/ryanh/fpga/sopc/lab2_led/lab2_led.sdk/Lab2_led_wrapper_hw_platform_0/Lab2_led_wrapper.bit"
+22:58:56 INFO  : Disconnected from the channel tcfchan#3.
+22:58:57 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248BE0D1E" && level==0} -index 1' command is executed.
+22:58:57 INFO  : 'fpga -state' command is executed.
+22:58:57 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:58:57 INFO  : Jtag cable 'Digilent Zed 210248BE0D1E' is selected.
+22:58:57 INFO  : 'jtag frequency' command is executed.
+22:58:57 INFO  : Sourcing of 'C:/Users/ryanh/fpga/sopc/lab2_led/lab2_led.sdk/Lab2_led_wrapper_hw_platform_0/ps7_init.tcl' is done.
+22:58:57 INFO  : Context for 'APU' is selected.
+22:58:58 INFO  : Hardware design information is loaded from 'C:/Users/ryanh/fpga/sopc/lab2_led/lab2_led.sdk/Lab2_led_wrapper_hw_platform_0/system.hdf'.
+22:58:58 INFO  : 'configparams force-mem-access 1' command is executed.
+22:58:58 INFO  : Context for 'APU' is selected.
+22:58:58 INFO  : 'stop' command is executed.
+22:58:59 INFO  : 'ps7_init' command is executed.
+22:58:59 INFO  : 'ps7_post_config' command is executed.
+22:58:59 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:58:59 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+22:58:59 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:58:59 INFO  : The application 'C:/Users/ryanh/fpga/sopc/lab2_led/lab2_led.sdk/Lab2_led_sdk/Debug/Lab2_led_sdk.elf' is downloaded to processor 'ps7_cortexa9_0'.
+22:58:59 INFO  : 'configparams force-mem-access 0' command is executed.
+22:58:59 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/ryanh/fpga/sopc/lab2_led/lab2_led.sdk/Lab2_led_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zed 210248BE0D1E"} -index 0
+loadhw -hw C:/Users/ryanh/fpga/sopc/lab2_led/lab2_led.sdk/Lab2_led_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zed 210248BE0D1E"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248BE0D1E"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248BE0D1E"} -index 0
+dow C:/Users/ryanh/fpga/sopc/lab2_led/lab2_led.sdk/Lab2_led_sdk/Debug/Lab2_led_sdk.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+22:58:59 INFO  : Memory regions updated for context APU
+22:58:59 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:58:59 INFO  : 'con' command is executed.
+22:58:59 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248BE0D1E"} -index 0
+con
+----------------End of Script----------------
+
+22:58:59 INFO  : Launch script is exported to file 'C:\Users\ryanh\fpga\sopc\lab2_led\lab2_led.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_lab2_led_sdk.elf_on_local.tcl'
+23:16:23 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1777993946276,  Project:1777992057563
+23:16:23 INFO  : Project Lab2_led_wrapper_hw_platform_0's source hardware specification located at C:/Users/ryanh/fpga/sopc/lab2_led/lab2_led.sdk/Lab2_led_wrapper.hdf is now different from the local copy.
+		 The local copy will be replaced with the source specification and your workspace will be updated.
+23:16:49 INFO  : Copied contents of C:/Users/ryanh/fpga/sopc/lab2_led/lab2_led.sdk/Lab2_led_wrapper.hdf into \Lab2_led_wrapper_hw_platform_0\system.hdf.
+23:16:51 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+23:16:52 INFO  : 
+23:16:53 INFO  : Updating hardware inferred compiler options for Lab2_led_sdk.
+23:16:53 INFO  : Clearing existing target manager status.
+23:16:53 INFO  : Closing and re-opening the MSS file of ther project Lab2_led_sdk_bsp
+23:16:54 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+23:16:55 WARN  : Linker script will not be updated automatically. Users need to update it manually.
+23:17:50 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:17:50 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248BE0D1E" && level==0} -index 1' command is executed.
+23:17:52 INFO  : FPGA configured successfully with bitstream "C:/Users/ryanh/fpga/sopc/lab2_led/lab2_led.sdk/Lab2_led_wrapper_hw_platform_0/Lab2_led_wrapper.bit"
+23:18:02 INFO  : Disconnected from the channel tcfchan#4.
+23:18:03 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248BE0D1E" && level==0} -index 1' command is executed.
+23:18:03 INFO  : 'fpga -state' command is executed.
+23:18:03 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:18:04 INFO  : Jtag cable 'Digilent Zed 210248BE0D1E' is selected.
+23:18:04 INFO  : 'jtag frequency' command is executed.
+23:18:04 INFO  : Sourcing of 'C:/Users/ryanh/fpga/sopc/lab2_led/lab2_led.sdk/Lab2_led_wrapper_hw_platform_0/ps7_init.tcl' is done.
+23:18:04 INFO  : Context for 'APU' is selected.
+23:18:04 INFO  : Hardware design information is loaded from 'C:/Users/ryanh/fpga/sopc/lab2_led/lab2_led.sdk/Lab2_led_wrapper_hw_platform_0/system.hdf'.
+23:18:04 INFO  : 'configparams force-mem-access 1' command is executed.
+23:18:04 INFO  : Context for 'APU' is selected.
+23:18:04 INFO  : 'stop' command is executed.
+23:18:04 INFO  : 'ps7_init' command is executed.
+23:18:04 INFO  : 'ps7_post_config' command is executed.
+23:18:04 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:18:04 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+23:18:04 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:18:04 INFO  : The application 'C:/Users/ryanh/fpga/sopc/lab2_led/lab2_led.sdk/Lab2_led_sdk/Debug/Lab2_led_sdk.elf' is downloaded to processor 'ps7_cortexa9_0'.
+23:18:04 INFO  : 'configparams force-mem-access 0' command is executed.
+23:18:04 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/ryanh/fpga/sopc/lab2_led/lab2_led.sdk/Lab2_led_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zed 210248BE0D1E"} -index 0
+loadhw -hw C:/Users/ryanh/fpga/sopc/lab2_led/lab2_led.sdk/Lab2_led_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zed 210248BE0D1E"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248BE0D1E"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248BE0D1E"} -index 0
+dow C:/Users/ryanh/fpga/sopc/lab2_led/lab2_led.sdk/Lab2_led_sdk/Debug/Lab2_led_sdk.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+23:18:04 INFO  : Memory regions updated for context APU
+23:18:04 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:18:04 INFO  : 'con' command is executed.
+23:18:04 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248BE0D1E"} -index 0
+con
+----------------End of Script----------------
+
+23:18:04 INFO  : Launch script is exported to file 'C:\Users\ryanh\fpga\sopc\lab2_led\lab2_led.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_lab2_led_sdk.elf_on_local.tcl'
+23:18:28 INFO  : Disconnected from the channel tcfchan#5.
+23:18:30 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248BE0D1E" && level==0} -index 1' command is executed.
+23:18:30 INFO  : 'fpga -state' command is executed.
+23:18:30 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:18:30 INFO  : Jtag cable 'Digilent Zed 210248BE0D1E' is selected.
+23:18:30 INFO  : 'jtag frequency' command is executed.
+23:18:30 INFO  : Sourcing of 'C:/Users/ryanh/fpga/sopc/lab2_led/lab2_led.sdk/Lab2_led_wrapper_hw_platform_0/ps7_init.tcl' is done.
+23:18:30 INFO  : Context for 'APU' is selected.
+23:18:31 INFO  : Hardware design information is loaded from 'C:/Users/ryanh/fpga/sopc/lab2_led/lab2_led.sdk/Lab2_led_wrapper_hw_platform_0/system.hdf'.
+23:18:31 INFO  : 'configparams force-mem-access 1' command is executed.
+23:18:31 INFO  : Context for 'APU' is selected.
+23:18:31 INFO  : 'stop' command is executed.
+23:18:31 INFO  : 'ps7_init' command is executed.
+23:18:31 INFO  : 'ps7_post_config' command is executed.
+23:18:31 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:18:31 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+23:18:31 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:18:31 INFO  : The application 'C:/Users/ryanh/fpga/sopc/lab2_led/lab2_led.sdk/Lab2_led_sdk/Debug/Lab2_led_sdk.elf' is downloaded to processor 'ps7_cortexa9_0'.
+23:18:31 INFO  : 'configparams force-mem-access 0' command is executed.
+23:18:31 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/ryanh/fpga/sopc/lab2_led/lab2_led.sdk/Lab2_led_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zed 210248BE0D1E"} -index 0
+loadhw -hw C:/Users/ryanh/fpga/sopc/lab2_led/lab2_led.sdk/Lab2_led_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zed 210248BE0D1E"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248BE0D1E"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248BE0D1E"} -index 0
+dow C:/Users/ryanh/fpga/sopc/lab2_led/lab2_led.sdk/Lab2_led_sdk/Debug/Lab2_led_sdk.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+23:18:31 INFO  : Memory regions updated for context APU
+23:18:31 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:18:31 INFO  : 'con' command is executed.
+23:18:31 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248BE0D1E"} -index 0
+con
+----------------End of Script----------------
+
+23:18:31 INFO  : Launch script is exported to file 'C:\Users\ryanh\fpga\sopc\lab2_led\lab2_led.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_lab2_led_sdk.elf_on_local.tcl'
+23:42:53 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1777995758144,  Project:1777993946276
+23:42:53 INFO  : Project Lab2_led_wrapper_hw_platform_0's source hardware specification located at C:/Users/ryanh/fpga/sopc/lab2_led/lab2_led.sdk/Lab2_led_wrapper.hdf is now different from the local copy.
+		 The local copy will be replaced with the source specification and your workspace will be updated.
+23:43:04 INFO  : Copied contents of C:/Users/ryanh/fpga/sopc/lab2_led/lab2_led.sdk/Lab2_led_wrapper.hdf into \Lab2_led_wrapper_hw_platform_0\system.hdf.
+23:43:05 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+23:43:07 INFO  : 
+23:43:08 INFO  : Updating hardware inferred compiler options for Lab2_led_sdk.
+23:43:08 INFO  : Clearing existing target manager status.
+23:43:08 INFO  : Closing and re-opening the MSS file of ther project Lab2_led_sdk_bsp
+23:43:08 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+23:43:09 WARN  : Linker script will not be updated automatically. Users need to update it manually.
+23:44:00 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:44:00 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248BE0D1E" && level==0} -index 1' command is executed.
+23:44:03 INFO  : FPGA configured successfully with bitstream "C:/Users/ryanh/fpga/sopc/lab2_led/lab2_led.sdk/Lab2_led_wrapper_hw_platform_0/Lab2_led_wrapper.bit"
+23:44:28 INFO  : Disconnected from the channel tcfchan#6.
+23:44:29 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248BE0D1E" && level==0} -index 1' command is executed.
+23:44:29 INFO  : 'fpga -state' command is executed.
+23:44:29 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:44:30 INFO  : Jtag cable 'Digilent Zed 210248BE0D1E' is selected.
+23:44:30 INFO  : 'jtag frequency' command is executed.
+23:44:30 INFO  : Sourcing of 'C:/Users/ryanh/fpga/sopc/lab2_led/lab2_led.sdk/Lab2_led_wrapper_hw_platform_0/ps7_init.tcl' is done.
+23:44:30 INFO  : Context for 'APU' is selected.
+23:44:30 INFO  : Hardware design information is loaded from 'C:/Users/ryanh/fpga/sopc/lab2_led/lab2_led.sdk/Lab2_led_wrapper_hw_platform_0/system.hdf'.
+23:44:30 INFO  : 'configparams force-mem-access 1' command is executed.
+23:44:30 INFO  : Context for 'APU' is selected.
+23:44:30 INFO  : 'stop' command is executed.
+23:44:30 INFO  : 'ps7_init' command is executed.
+23:44:30 INFO  : 'ps7_post_config' command is executed.
+23:44:30 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:44:30 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+23:44:30 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:44:30 INFO  : The application 'C:/Users/ryanh/fpga/sopc/lab2_led/lab2_led.sdk/Lab2_led_sdk/Debug/Lab2_led_sdk.elf' is downloaded to processor 'ps7_cortexa9_0'.
+23:44:30 INFO  : 'configparams force-mem-access 0' command is executed.
+23:44:30 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/ryanh/fpga/sopc/lab2_led/lab2_led.sdk/Lab2_led_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zed 210248BE0D1E"} -index 0
+loadhw -hw C:/Users/ryanh/fpga/sopc/lab2_led/lab2_led.sdk/Lab2_led_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zed 210248BE0D1E"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248BE0D1E"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248BE0D1E"} -index 0
+dow C:/Users/ryanh/fpga/sopc/lab2_led/lab2_led.sdk/Lab2_led_sdk/Debug/Lab2_led_sdk.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+23:44:30 INFO  : Memory regions updated for context APU
+23:44:30 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:44:30 INFO  : 'con' command is executed.
+23:44:30 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248BE0D1E"} -index 0
+con
+----------------End of Script----------------
+
+23:44:30 INFO  : Launch script is exported to file 'C:\Users\ryanh\fpga\sopc\lab2_led\lab2_led.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_lab2_led_sdk.elf_on_local.tcl'
+00:18:37 INFO  : Disconnected from the channel tcfchan#7.
