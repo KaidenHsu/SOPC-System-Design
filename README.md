@@ -21,10 +21,10 @@ Labs | Description
 --------|:--------
 [Lab 1-2][2.1.1]| SDK
 [Lab 2-1][2.2.1]| Calculator AXI-Lite Slave IP System
-[Lab 2-2][2.2.2]| AXI Master IP System
+[Lab 2-2][2.2.2]| Data Generator AXI Master IP System
 
-[2.1.1]: labs/lab1_2_sdk
-[2.2.1]: labs/lab2_1_calculator/
+[2.1.1]: labs/lab1_2_llm/
+[2.2.1]: labs/lab2_1_slave_system/
 [2.2.2]: labs/lab2_2_master_system/
 
 <p align="center"><img src="images/zedboard.png" alt="Zedboard" width="480" /></p>
