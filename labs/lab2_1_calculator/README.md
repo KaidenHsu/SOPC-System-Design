@@ -53,6 +53,8 @@ printf("data_in1 = %d\n", pointer[1]);
 printf("data_in2 = %d\n", pointer[2]);
 printf("The ADD result is %d\n", pointer[3]);
 printf("--------------------------\n");
+
+// test SUB and MUL functions
 ```
 
 <img src="images/demo.png" alt="demo" width="480" align="middle" />
@@ -63,6 +65,41 @@ printf("--------------------------\n");
 ▲ ILA Capture in Vivado
 
 ## 5. Exercise: Add a Second Slave IP in a Separate Address Space
+
+``` C
+// Cast base addresses to volatile pointers
+volatile int *slave1 = (int*)SLAVE1_BASEADDR;
+volatile int *slave2 = (int*)SLAVE2_BASEADDR;
+
+// ==========================================
+// Control Slave 1 (Lab2_IP_0)
+// ==========================================
+printf("=== Slave 1 ===\n");
+
+// Write operands to Slave 1 once
+slave1[slv_reg1] = 100;
+slave1[slv_reg2] = 200;
+
+printf("data_in1 = %d\n", slave1[slv_reg1]);
+printf("data_in2 = %d\n", slave1[slv_reg2]);
+
+// Test ADD
+slave1[slv_reg0] = 0;
+printf("The ADD result is %d\n", slave1[slv_reg3]);
+
+// Test SUB
+slave1[slv_reg0] = 1;
+printf("The SUB result is %d\n", slave1[slv_reg3]);
+
+// Test MUL
+slave1[slv_reg0] = 2;
+printf("The MUL result is %d\n\n", slave1[slv_reg3]);
+
+// ==========================================
+// Control Slave 2 (Lab2_IP_1)
+// ==========================================
+// ...
+```
 
 <img src="images/two_slaves_block_design.png" alt="two slaves block design" width="840" align="middle" />
 ▲ Two Slaves Block Design
