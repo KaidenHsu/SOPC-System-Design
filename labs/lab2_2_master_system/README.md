@@ -1,4 +1,4 @@
-# Lab 2.2 AXI Master IP System
+# Lab 2.2 Data Generator AXI Master IP System
 
 ## 1. Steps
 
