@@ -19,7 +19,7 @@
 
 Labs | Description
 --------|:--------
-[Lab 1-2][2.1.1]| SDK
+[Lab 1-2][2.1.1]| Llama C Model Execution on ZYNQ 7000 PS
 [Lab 2-1][2.2.1]| Calculator AXI-Lite Slave IP System
 [Lab 2-2][2.2.2]| Data Generator AXI Master IP System
 [Lab 2-3][2.2.3]| Exercise: LED AXI Slave IP System
