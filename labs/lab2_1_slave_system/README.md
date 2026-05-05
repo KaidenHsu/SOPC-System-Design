@@ -12,6 +12,7 @@
     * run block, connection automation wizards
     * add ILA core
     * create HDL wrapper
+    * generate bitstream
 3. **Execute in SDK (Part 1.2)**
     * identify IP base address in `system.hdf`
     * modify `helloworld.c` to test our calculator slave IP
@@ -37,7 +38,7 @@
 <img src="images/vivado_block_design.png" alt="vivado block design" width="840" align="middle" />
 ▲ Vivado Block Design
 
-## 3. Application Program (Firmware)
+## 3. SDK Application Program
 
 ``` C
 volatile int *pointer = (int*)0x43c00000;
