@@ -50,5 +50,5 @@ for (i = 0; i < 16; i++) {
 }
 ```
 
-<img src="images/demo.png" alt="demo" width="480" align="middle" />
+<img src="images/demo.png" alt="demo" width="240" align="middle" />
 ▲ SDK Execution
