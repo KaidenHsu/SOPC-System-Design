@@ -81,5 +81,5 @@ int main()
 }
 ```
 
-<img src="images/llm_output.png" alt="LLM output" width="840" align="middle" />
+<img src="images/llm_output.png" alt="LLM output" align="middle" />
 ▲ SDK Execution
