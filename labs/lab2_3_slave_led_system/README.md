@@ -20,6 +20,9 @@
 
 ## 2. Master IP and System Design
 
+<img src="images/led_interface.png" alt="led interface" width="840" align="middle" />
+▲ LED Module Interface
+
 <img src="images/vivado_block_design.png" alt="vivado block design" width="840" align="middle" />
 ▲ Vivado Block Design
 
@@ -30,7 +33,7 @@ print("=== LED Circular Light ===\n\r");
 
 volatile int *base_addr = (int*)0x43c00000;
 
-base_addr[0] = 10000000;
+base_addr[0] = 10000000; // counter signal
 ```
 
 <img src="images/led_demo.gif" alt="led demo" width="480" align="middle" />
