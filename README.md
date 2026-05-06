@@ -19,12 +19,14 @@
 
 Labs | Description
 --------|:--------
-[Lab 1-2][2.1.1]| Llama C Model Execution on ZYNQ-7000 PS
+[Lab 1-1][2.1.1]| LED Block Design Warmup
+[Lab 1-2][2.1.2]| Llama C Model Execution on ZYNQ-7000 PS
 [Lab 2-1][2.2.1]| Calculator AXI-Lite Slave IP System
 [Lab 2-2][2.2.2]| Data Generator AXI Master IP System
 [Lab 2-3][2.2.3]| Exercise: LED AXI-Lite Slave IP System
 
-[2.1.1]: labs/lab1_2_llm/
+[2.1.1]: labs/lab1_1_led/
+[2.1.2]: labs/lab1_2_llm/
 [2.2.1]: labs/lab2_1_slave_system/
 [2.2.2]: labs/lab2_2_master_system/
 [2.2.3]: labs/lab2_3_slave_led_system/
