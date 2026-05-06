@@ -1,4 +1,4 @@
-# Lab 2.3 Exercise: LED AXI Slave IP System
+# Lab 2.3 Exercise: LED AXI-Lite Slave IP System
 
 ## 1. Steps
 
