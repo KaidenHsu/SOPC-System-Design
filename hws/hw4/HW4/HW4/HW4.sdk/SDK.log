@@ -1,0 +1,699 @@
+01:46:56 INFO  : Registering command handlers for SDK TCF services
+01:46:57 INFO  : Launching XSCT server: xsct.bat -interactive C:\SOPC\HW4\HW4\HW4\HW4.sdk\temp_xsdb_launch_script.tcl
+01:47:00 INFO  : XSCT server has started successfully.
+01:47:00 INFO  : Successfully done setting XSCT server connection channel  
+01:47:00 INFO  : Successfully done setting SDK workspace  
+01:47:00 INFO  : Processing command line option -hwspec C:/SOPC/HW4/HW4/HW4/HW4.sdk/HW4_system_wrapper.hdf.
+02:05:08 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+02:05:08 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248708024" && level==0} -index 1' command is executed.
+02:05:11 INFO  : FPGA configured successfully with bitstream "C:/SOPC/HW4/HW4/HW4/HW4.sdk/HW4_system_wrapper_hw_platform_0/HW4_system_wrapper.bit"
+02:05:18 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248708024" && level==0} -index 1' command is executed.
+02:05:18 INFO  : 'fpga -state' command is executed.
+02:05:18 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+02:05:18 INFO  : Jtag cable 'Digilent Zed 210248708024' is selected.
+02:05:18 INFO  : 'jtag frequency' command is executed.
+02:05:18 INFO  : Sourcing of 'C:/SOPC/HW4/HW4/HW4/HW4.sdk/HW4_system_wrapper_hw_platform_0/ps7_init.tcl' is done.
+02:05:18 INFO  : Context for 'APU' is selected.
+02:05:18 INFO  : Hardware design information is loaded from 'C:/SOPC/HW4/HW4/HW4/HW4.sdk/HW4_system_wrapper_hw_platform_0/system.hdf'.
+02:05:18 INFO  : 'configparams force-mem-access 1' command is executed.
+02:05:18 INFO  : Context for 'APU' is selected.
+02:05:18 INFO  : 'stop' command is executed.
+02:05:19 INFO  : 'ps7_init' command is executed.
+02:05:19 INFO  : 'ps7_post_config' command is executed.
+02:05:19 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+02:05:19 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+02:05:19 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+02:05:19 INFO  : The application 'C:/SOPC/HW4/HW4/HW4/HW4.sdk/HW4_IP_SDK/Debug/HW4_IP_SDK.elf' is downloaded to processor 'ps7_cortexa9_0'.
+02:05:19 INFO  : 'configparams force-mem-access 0' command is executed.
+02:05:19 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/SOPC/HW4/HW4/HW4/HW4.sdk/HW4_system_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zed 210248708024"} -index 0
+loadhw -hw C:/SOPC/HW4/HW4/HW4/HW4.sdk/HW4_system_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zed 210248708024"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248708024"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248708024"} -index 0
+dow C:/SOPC/HW4/HW4/HW4/HW4.sdk/HW4_IP_SDK/Debug/HW4_IP_SDK.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+02:05:19 INFO  : Memory regions updated for context APU
+02:05:20 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+02:05:20 INFO  : 'con' command is executed.
+02:05:20 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248708024"} -index 0
+con
+----------------End of Script----------------
+
+02:05:20 INFO  : Launch script is exported to file 'C:\SOPC\HW4\HW4\HW4\HW4.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_hw4_ip_sdk.elf_on_local.tcl'
+02:42:30 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+02:42:30 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248708024" && level==0} -index 1' command is executed.
+02:42:32 INFO  : FPGA configured successfully with bitstream "C:/SOPC/HW4/HW4/HW4/HW4.sdk/HW4_system_wrapper_hw_platform_0/HW4_system_wrapper.bit"
+02:42:58 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+02:42:58 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248708024" && level==0} -index 1' command is executed.
+02:43:01 INFO  : FPGA configured successfully with bitstream "C:/SOPC/HW4/HW4/HW4/HW4.sdk/HW4_system_wrapper_hw_platform_0/HW4_system_wrapper.bit"
+02:43:08 INFO  : Disconnected from the channel tcfchan#1.
+02:43:09 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248708024" && level==0} -index 1' command is executed.
+02:43:09 INFO  : 'fpga -state' command is executed.
+02:43:09 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+02:43:10 INFO  : Jtag cable 'Digilent Zed 210248708024' is selected.
+02:43:10 INFO  : 'jtag frequency' command is executed.
+02:43:10 INFO  : Sourcing of 'C:/SOPC/HW4/HW4/HW4/HW4.sdk/HW4_system_wrapper_hw_platform_0/ps7_init.tcl' is done.
+02:43:10 INFO  : Context for 'APU' is selected.
+02:43:12 INFO  : Hardware design information is loaded from 'C:/SOPC/HW4/HW4/HW4/HW4.sdk/HW4_system_wrapper_hw_platform_0/system.hdf'.
+02:43:12 INFO  : 'configparams force-mem-access 1' command is executed.
+02:43:12 INFO  : Context for 'APU' is selected.
+02:43:12 INFO  : 'stop' command is executed.
+02:43:12 INFO  : 'ps7_init' command is executed.
+02:43:12 INFO  : 'ps7_post_config' command is executed.
+02:43:12 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+02:43:12 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+02:43:12 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+02:43:12 INFO  : The application 'C:/SOPC/HW4/HW4/HW4/HW4.sdk/HW4_IP_SDK/Debug/HW4_IP_SDK.elf' is downloaded to processor 'ps7_cortexa9_0'.
+02:43:12 INFO  : 'configparams force-mem-access 0' command is executed.
+02:43:12 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/SOPC/HW4/HW4/HW4/HW4.sdk/HW4_system_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zed 210248708024"} -index 0
+loadhw -hw C:/SOPC/HW4/HW4/HW4/HW4.sdk/HW4_system_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zed 210248708024"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248708024"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248708024"} -index 0
+dow C:/SOPC/HW4/HW4/HW4/HW4.sdk/HW4_IP_SDK/Debug/HW4_IP_SDK.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+02:43:12 INFO  : Memory regions updated for context APU
+02:43:12 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+02:43:13 INFO  : 'con' command is executed.
+02:43:13 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248708024"} -index 0
+con
+----------------End of Script----------------
+
+02:43:13 INFO  : Launch script is exported to file 'C:\SOPC\HW4\HW4\HW4\HW4.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_hw4_ip_sdk.elf_on_local.tcl'
+03:04:04 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+03:04:04 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248708024" && level==0} -index 1' command is executed.
+03:04:06 INFO  : FPGA configured successfully with bitstream "C:/SOPC/HW4/HW4/HW4/HW4.sdk/HW4_system_wrapper_hw_platform_0/HW4_system_wrapper.bit"
+03:04:12 INFO  : Disconnected from the channel tcfchan#2.
+03:04:13 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248708024" && level==0} -index 1' command is executed.
+03:04:13 INFO  : 'fpga -state' command is executed.
+03:04:13 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+03:04:14 INFO  : Jtag cable 'Digilent Zed 210248708024' is selected.
+03:04:14 INFO  : 'jtag frequency' command is executed.
+03:04:14 INFO  : Sourcing of 'C:/SOPC/HW4/HW4/HW4/HW4.sdk/HW4_system_wrapper_hw_platform_0/ps7_init.tcl' is done.
+03:04:14 INFO  : Context for 'APU' is selected.
+03:04:16 INFO  : Hardware design information is loaded from 'C:/SOPC/HW4/HW4/HW4/HW4.sdk/HW4_system_wrapper_hw_platform_0/system.hdf'.
+03:04:16 INFO  : 'configparams force-mem-access 1' command is executed.
+03:04:16 INFO  : Context for 'APU' is selected.
+03:04:16 INFO  : 'stop' command is executed.
+03:04:16 INFO  : 'ps7_init' command is executed.
+03:04:16 INFO  : 'ps7_post_config' command is executed.
+03:04:17 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+03:04:17 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+03:04:17 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+03:04:17 INFO  : The application 'C:/SOPC/HW4/HW4/HW4/HW4.sdk/HW4_IP_SDK/Debug/HW4_IP_SDK.elf' is downloaded to processor 'ps7_cortexa9_0'.
+03:04:17 INFO  : 'configparams force-mem-access 0' command is executed.
+03:04:17 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/SOPC/HW4/HW4/HW4/HW4.sdk/HW4_system_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zed 210248708024"} -index 0
+loadhw -hw C:/SOPC/HW4/HW4/HW4/HW4.sdk/HW4_system_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zed 210248708024"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248708024"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248708024"} -index 0
+dow C:/SOPC/HW4/HW4/HW4/HW4.sdk/HW4_IP_SDK/Debug/HW4_IP_SDK.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+03:04:17 INFO  : Memory regions updated for context APU
+03:04:17 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+03:04:17 INFO  : 'con' command is executed.
+03:04:17 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248708024"} -index 0
+con
+----------------End of Script----------------
+
+03:04:17 INFO  : Launch script is exported to file 'C:\SOPC\HW4\HW4\HW4\HW4.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_hw4_ip_sdk.elf_on_local.tcl'
+03:06:47 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+03:06:47 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248708024" && level==0} -index 1' command is executed.
+03:06:49 INFO  : FPGA configured successfully with bitstream "C:/SOPC/HW4/HW4/HW4/HW4.sdk/HW4_system_wrapper_hw_platform_0/HW4_system_wrapper.bit"
+03:06:56 INFO  : Disconnected from the channel tcfchan#3.
+03:06:57 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248708024" && level==0} -index 1' command is executed.
+03:06:57 INFO  : 'fpga -state' command is executed.
+03:06:57 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+03:06:57 INFO  : Jtag cable 'Digilent Zed 210248708024' is selected.
+03:06:57 INFO  : 'jtag frequency' command is executed.
+03:06:57 INFO  : Sourcing of 'C:/SOPC/HW4/HW4/HW4/HW4.sdk/HW4_system_wrapper_hw_platform_0/ps7_init.tcl' is done.
+03:06:57 INFO  : Context for 'APU' is selected.
+03:06:59 INFO  : Hardware design information is loaded from 'C:/SOPC/HW4/HW4/HW4/HW4.sdk/HW4_system_wrapper_hw_platform_0/system.hdf'.
+03:06:59 INFO  : 'configparams force-mem-access 1' command is executed.
+03:06:59 INFO  : Context for 'APU' is selected.
+03:06:59 INFO  : 'stop' command is executed.
+03:06:59 INFO  : 'ps7_init' command is executed.
+03:06:59 INFO  : 'ps7_post_config' command is executed.
+03:06:59 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+03:06:59 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+03:06:59 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+03:06:59 INFO  : The application 'C:/SOPC/HW4/HW4/HW4/HW4.sdk/HW4_IP_SDK/Debug/HW4_IP_SDK.elf' is downloaded to processor 'ps7_cortexa9_0'.
+03:06:59 INFO  : 'configparams force-mem-access 0' command is executed.
+03:06:59 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/SOPC/HW4/HW4/HW4/HW4.sdk/HW4_system_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zed 210248708024"} -index 0
+loadhw -hw C:/SOPC/HW4/HW4/HW4/HW4.sdk/HW4_system_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zed 210248708024"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248708024"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248708024"} -index 0
+dow C:/SOPC/HW4/HW4/HW4/HW4.sdk/HW4_IP_SDK/Debug/HW4_IP_SDK.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+03:07:00 INFO  : Memory regions updated for context APU
+03:07:00 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+03:07:00 INFO  : 'con' command is executed.
+03:07:00 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248708024"} -index 0
+con
+----------------End of Script----------------
+
+03:07:00 INFO  : Launch script is exported to file 'C:\SOPC\HW4\HW4\HW4\HW4.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_hw4_ip_sdk.elf_on_local.tcl'
+03:08:01 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+03:08:01 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248708024" && level==0} -index 1' command is executed.
+03:08:03 INFO  : FPGA configured successfully with bitstream "C:/SOPC/HW4/HW4/HW4/HW4.sdk/HW4_system_wrapper_hw_platform_0/HW4_system_wrapper.bit"
+03:08:15 INFO  : Disconnected from the channel tcfchan#4.
+03:08:16 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248708024" && level==0} -index 1' command is executed.
+03:08:16 INFO  : 'fpga -state' command is executed.
+03:08:16 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+03:08:16 INFO  : Jtag cable 'Digilent Zed 210248708024' is selected.
+03:08:16 INFO  : 'jtag frequency' command is executed.
+03:08:16 INFO  : Sourcing of 'C:/SOPC/HW4/HW4/HW4/HW4.sdk/HW4_system_wrapper_hw_platform_0/ps7_init.tcl' is done.
+03:08:16 INFO  : Context for 'APU' is selected.
+03:08:18 INFO  : Hardware design information is loaded from 'C:/SOPC/HW4/HW4/HW4/HW4.sdk/HW4_system_wrapper_hw_platform_0/system.hdf'.
+03:08:18 INFO  : 'configparams force-mem-access 1' command is executed.
+03:08:18 INFO  : Context for 'APU' is selected.
+03:08:18 INFO  : 'stop' command is executed.
+03:08:19 INFO  : 'ps7_init' command is executed.
+03:08:19 INFO  : 'ps7_post_config' command is executed.
+03:08:19 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+03:08:19 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+03:08:19 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+03:08:19 INFO  : The application 'C:/SOPC/HW4/HW4/HW4/HW4.sdk/HW4_IP_SDK/Debug/HW4_IP_SDK.elf' is downloaded to processor 'ps7_cortexa9_0'.
+03:08:19 INFO  : 'configparams force-mem-access 0' command is executed.
+03:08:19 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/SOPC/HW4/HW4/HW4/HW4.sdk/HW4_system_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zed 210248708024"} -index 0
+loadhw -hw C:/SOPC/HW4/HW4/HW4/HW4.sdk/HW4_system_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zed 210248708024"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248708024"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248708024"} -index 0
+dow C:/SOPC/HW4/HW4/HW4/HW4.sdk/HW4_IP_SDK/Debug/HW4_IP_SDK.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+03:08:19 INFO  : Memory regions updated for context APU
+03:08:19 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+03:08:19 INFO  : 'con' command is executed.
+03:08:19 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248708024"} -index 0
+con
+----------------End of Script----------------
+
+03:08:19 INFO  : Launch script is exported to file 'C:\SOPC\HW4\HW4\HW4\HW4.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_hw4_ip_sdk.elf_on_local.tcl'
+03:08:52 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+03:08:52 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248708024" && level==0} -index 1' command is executed.
+03:08:55 INFO  : FPGA configured successfully with bitstream "C:/SOPC/HW4/HW4/HW4/HW4.sdk/HW4_system_wrapper_hw_platform_0/HW4_system_wrapper.bit"
+03:09:05 INFO  : Disconnected from the channel tcfchan#5.
+03:09:06 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248708024" && level==0} -index 1' command is executed.
+03:09:06 INFO  : 'fpga -state' command is executed.
+03:09:06 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+03:09:06 INFO  : Jtag cable 'Digilent Zed 210248708024' is selected.
+03:09:06 INFO  : 'jtag frequency' command is executed.
+03:09:06 INFO  : Sourcing of 'C:/SOPC/HW4/HW4/HW4/HW4.sdk/HW4_system_wrapper_hw_platform_0/ps7_init.tcl' is done.
+03:09:06 INFO  : Context for 'APU' is selected.
+03:09:08 INFO  : Hardware design information is loaded from 'C:/SOPC/HW4/HW4/HW4/HW4.sdk/HW4_system_wrapper_hw_platform_0/system.hdf'.
+03:09:08 INFO  : 'configparams force-mem-access 1' command is executed.
+03:09:08 INFO  : Context for 'APU' is selected.
+03:09:08 INFO  : 'stop' command is executed.
+03:09:09 INFO  : 'ps7_init' command is executed.
+03:09:09 INFO  : 'ps7_post_config' command is executed.
+03:09:09 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+03:09:09 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+03:09:09 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+03:09:09 INFO  : The application 'C:/SOPC/HW4/HW4/HW4/HW4.sdk/HW4_IP_SDK/Debug/HW4_IP_SDK.elf' is downloaded to processor 'ps7_cortexa9_0'.
+03:09:09 INFO  : 'configparams force-mem-access 0' command is executed.
+03:09:09 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/SOPC/HW4/HW4/HW4/HW4.sdk/HW4_system_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zed 210248708024"} -index 0
+loadhw -hw C:/SOPC/HW4/HW4/HW4/HW4.sdk/HW4_system_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zed 210248708024"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248708024"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248708024"} -index 0
+dow C:/SOPC/HW4/HW4/HW4/HW4.sdk/HW4_IP_SDK/Debug/HW4_IP_SDK.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+03:09:09 INFO  : Memory regions updated for context APU
+03:09:09 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+03:09:09 INFO  : 'con' command is executed.
+03:09:09 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248708024"} -index 0
+con
+----------------End of Script----------------
+
+03:09:09 INFO  : Launch script is exported to file 'C:\SOPC\HW4\HW4\HW4\HW4.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_hw4_ip_sdk.elf_on_local.tcl'
+03:11:26 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+03:11:26 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248708024" && level==0} -index 1' command is executed.
+03:11:29 INFO  : FPGA configured successfully with bitstream "C:/SOPC/HW4/HW4/HW4/HW4.sdk/HW4_system_wrapper_hw_platform_0/HW4_system_wrapper.bit"
+03:11:36 INFO  : Disconnected from the channel tcfchan#6.
+03:11:37 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248708024" && level==0} -index 1' command is executed.
+03:11:37 INFO  : 'fpga -state' command is executed.
+03:11:37 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+03:11:37 INFO  : Jtag cable 'Digilent Zed 210248708024' is selected.
+03:11:37 INFO  : 'jtag frequency' command is executed.
+03:11:37 INFO  : Sourcing of 'C:/SOPC/HW4/HW4/HW4/HW4.sdk/HW4_system_wrapper_hw_platform_0/ps7_init.tcl' is done.
+03:11:37 INFO  : Context for 'APU' is selected.
+03:11:40 INFO  : Hardware design information is loaded from 'C:/SOPC/HW4/HW4/HW4/HW4.sdk/HW4_system_wrapper_hw_platform_0/system.hdf'.
+03:11:40 INFO  : 'configparams force-mem-access 1' command is executed.
+03:11:40 INFO  : Context for 'APU' is selected.
+03:11:40 INFO  : 'stop' command is executed.
+03:11:41 INFO  : 'ps7_init' command is executed.
+03:11:41 INFO  : 'ps7_post_config' command is executed.
+03:11:41 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+03:11:41 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+03:11:41 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+03:11:41 INFO  : The application 'C:/SOPC/HW4/HW4/HW4/HW4.sdk/HW4_IP_SDK/Debug/HW4_IP_SDK.elf' is downloaded to processor 'ps7_cortexa9_0'.
+03:11:41 INFO  : 'configparams force-mem-access 0' command is executed.
+03:11:41 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/SOPC/HW4/HW4/HW4/HW4.sdk/HW4_system_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zed 210248708024"} -index 0
+loadhw -hw C:/SOPC/HW4/HW4/HW4/HW4.sdk/HW4_system_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zed 210248708024"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248708024"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248708024"} -index 0
+dow C:/SOPC/HW4/HW4/HW4/HW4.sdk/HW4_IP_SDK/Debug/HW4_IP_SDK.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+03:11:41 INFO  : Memory regions updated for context APU
+03:11:41 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+03:11:41 INFO  : 'con' command is executed.
+03:11:41 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248708024"} -index 0
+con
+----------------End of Script----------------
+
+03:11:41 INFO  : Launch script is exported to file 'C:\SOPC\HW4\HW4\HW4\HW4.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_hw4_ip_sdk.elf_on_local.tcl'
+03:11:52 INFO  : Disconnected from the channel tcfchan#7.
+23:21:48 INFO  : Registering command handlers for SDK TCF services
+23:21:49 INFO  : Launching XSCT server: xsct.bat -interactive C:\SOPC\HW4\HW4\HW4\HW4.sdk\temp_xsdb_launch_script.tcl
+23:21:52 INFO  : XSCT server has started successfully.
+23:21:52 INFO  : Successfully done setting XSCT server connection channel  
+23:21:56 INFO  : Successfully done setting SDK workspace  
+23:21:56 INFO  : Processing command line option -hwspec C:/SOPC/HW4/HW4/HW4/HW4.sdk/HW4_system_wrapper.hdf.
+23:21:56 INFO  : Checking for hwspec changes in the project HW4_system_wrapper_hw_platform_0.
+17:45:12 INFO  : Registering command handlers for SDK TCF services
+17:45:13 INFO  : Launching XSCT server: xsct.bat -interactive C:\SOPC\HW4\HW4\HW4\HW4.sdk\temp_xsdb_launch_script.tcl
+17:45:16 INFO  : XSCT server has started successfully.
+17:45:19 INFO  : Successfully done setting XSCT server connection channel  
+17:45:19 INFO  : Successfully done setting SDK workspace  
+17:45:19 INFO  : Processing command line option -hwspec C:/SOPC/HW4/HW4/HW4/HW4.sdk/HW4_system_wrapper.hdf.
+17:45:19 INFO  : Checking for hwspec changes in the project HW4_system_wrapper_hw_platform_0.
+03:20:52 INFO  : Registering command handlers for SDK TCF services
+03:20:53 INFO  : Launching XSCT server: xsct.bat -interactive C:\SOPC\HW4\HW4\HW4\HW4.sdk\temp_xsdb_launch_script.tcl
+03:20:56 INFO  : XSCT server has started successfully.
+03:20:56 INFO  : Successfully done setting XSCT server connection channel  
+03:20:59 INFO  : Successfully done setting SDK workspace  
+03:20:59 INFO  : Processing command line option -hwspec C:/SOPC/HW4/HW4/HW4/HW4.sdk/HW4_system_wrapper.hdf.
+03:20:59 INFO  : Checking for hwspec changes in the project HW4_system_wrapper_hw_platform_0.
+03:22:49 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+03:22:50 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248708024" && level==0} -index 1' command is executed.
+03:22:52 INFO  : FPGA configured successfully with bitstream "C:/SOPC/HW4/HW4/HW4/HW4.sdk/HW4_system_wrapper_hw_platform_0/HW4_system_wrapper.bit"
+03:23:37 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+03:23:37 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248708024" && level==0} -index 1' command is executed.
+03:23:39 INFO  : FPGA configured successfully with bitstream "C:/SOPC/HW4/HW4/HW4/HW4.sdk/HW4_system_wrapper_hw_platform_0/HW4_system_wrapper.bit"
+03:23:55 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248708024" && level==0} -index 1' command is executed.
+03:23:55 INFO  : 'fpga -state' command is executed.
+03:23:55 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+03:23:55 INFO  : Jtag cable 'Digilent Zed 210248708024' is selected.
+03:23:55 INFO  : 'jtag frequency' command is executed.
+03:23:55 INFO  : Sourcing of 'C:/SOPC/HW4/HW4/HW4/HW4.sdk/HW4_system_wrapper_hw_platform_0/ps7_init.tcl' is done.
+03:23:55 INFO  : Context for 'APU' is selected.
+03:23:55 INFO  : Hardware design information is loaded from 'C:/SOPC/HW4/HW4/HW4/HW4.sdk/HW4_system_wrapper_hw_platform_0/system.hdf'.
+03:23:55 INFO  : 'configparams force-mem-access 1' command is executed.
+03:23:55 INFO  : Context for 'APU' is selected.
+03:23:55 INFO  : 'stop' command is executed.
+03:23:56 INFO  : 'ps7_init' command is executed.
+03:23:56 INFO  : 'ps7_post_config' command is executed.
+03:23:56 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+03:23:56 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+03:23:56 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+03:23:56 INFO  : The application 'C:/SOPC/HW4/HW4/HW4/HW4.sdk/HW4_IP_SDK/Debug/HW4_IP_SDK.elf' is downloaded to processor 'ps7_cortexa9_0'.
+03:23:56 INFO  : 'configparams force-mem-access 0' command is executed.
+03:23:56 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/SOPC/HW4/HW4/HW4/HW4.sdk/HW4_system_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zed 210248708024"} -index 0
+loadhw -hw C:/SOPC/HW4/HW4/HW4/HW4.sdk/HW4_system_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zed 210248708024"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248708024"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248708024"} -index 0
+dow C:/SOPC/HW4/HW4/HW4/HW4.sdk/HW4_IP_SDK/Debug/HW4_IP_SDK.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+03:23:56 INFO  : Memory regions updated for context APU
+03:23:56 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+03:23:56 INFO  : 'con' command is executed.
+03:23:56 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248708024"} -index 0
+con
+----------------End of Script----------------
+
+03:23:56 INFO  : Launch script is exported to file 'C:\SOPC\HW4\HW4\HW4\HW4.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_hw4_ip_sdk.elf_on_local.tcl'
+03:28:45 INFO  : Disconnected from the channel tcfchan#1.
+03:28:46 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248708024" && level==0} -index 1' command is executed.
+03:28:46 INFO  : 'fpga -state' command is executed.
+03:28:46 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+03:28:46 INFO  : Jtag cable 'Digilent Zed 210248708024' is selected.
+03:28:46 INFO  : 'jtag frequency' command is executed.
+03:28:46 INFO  : Sourcing of 'C:/SOPC/HW4/HW4/HW4/HW4.sdk/HW4_system_wrapper_hw_platform_0/ps7_init.tcl' is done.
+03:28:46 INFO  : Context for 'APU' is selected.
+03:28:47 INFO  : Hardware design information is loaded from 'C:/SOPC/HW4/HW4/HW4/HW4.sdk/HW4_system_wrapper_hw_platform_0/system.hdf'.
+03:28:47 INFO  : 'configparams force-mem-access 1' command is executed.
+03:28:47 INFO  : Context for 'APU' is selected.
+03:28:48 INFO  : 'stop' command is executed.
+03:28:48 INFO  : 'ps7_init' command is executed.
+03:28:48 INFO  : 'ps7_post_config' command is executed.
+03:28:48 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+03:28:48 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+03:28:48 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+03:28:48 INFO  : The application 'C:/SOPC/HW4/HW4/HW4/HW4.sdk/HW4_IP_SDK/Debug/HW4_IP_SDK.elf' is downloaded to processor 'ps7_cortexa9_0'.
+03:28:48 INFO  : 'configparams force-mem-access 0' command is executed.
+03:28:48 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/SOPC/HW4/HW4/HW4/HW4.sdk/HW4_system_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zed 210248708024"} -index 0
+loadhw -hw C:/SOPC/HW4/HW4/HW4/HW4.sdk/HW4_system_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zed 210248708024"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248708024"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248708024"} -index 0
+dow C:/SOPC/HW4/HW4/HW4/HW4.sdk/HW4_IP_SDK/Debug/HW4_IP_SDK.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+03:28:48 INFO  : Memory regions updated for context APU
+03:28:48 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+03:28:48 INFO  : 'con' command is executed.
+03:28:48 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248708024"} -index 0
+con
+----------------End of Script----------------
+
+03:28:48 INFO  : Launch script is exported to file 'C:\SOPC\HW4\HW4\HW4\HW4.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_hw4_ip_sdk.elf_on_local.tcl'
+03:29:28 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+03:29:28 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248708024" && level==0} -index 1' command is executed.
+03:29:31 INFO  : FPGA configured successfully with bitstream "C:/SOPC/HW4/HW4/HW4/HW4.sdk/HW4_system_wrapper_hw_platform_0/HW4_system_wrapper.bit"
+03:29:36 INFO  : Disconnected from the channel tcfchan#2.
+03:29:37 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248708024" && level==0} -index 1' command is executed.
+03:29:37 INFO  : 'fpga -state' command is executed.
+03:29:37 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+03:29:37 INFO  : Jtag cable 'Digilent Zed 210248708024' is selected.
+03:29:37 INFO  : 'jtag frequency' command is executed.
+03:29:37 INFO  : Sourcing of 'C:/SOPC/HW4/HW4/HW4/HW4.sdk/HW4_system_wrapper_hw_platform_0/ps7_init.tcl' is done.
+03:29:37 INFO  : Context for 'APU' is selected.
+03:29:39 INFO  : Hardware design information is loaded from 'C:/SOPC/HW4/HW4/HW4/HW4.sdk/HW4_system_wrapper_hw_platform_0/system.hdf'.
+03:29:39 INFO  : 'configparams force-mem-access 1' command is executed.
+03:29:39 INFO  : Context for 'APU' is selected.
+03:29:39 INFO  : 'stop' command is executed.
+03:29:39 INFO  : 'ps7_init' command is executed.
+03:29:39 INFO  : 'ps7_post_config' command is executed.
+03:29:39 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+03:29:39 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+03:29:39 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+03:29:39 INFO  : The application 'C:/SOPC/HW4/HW4/HW4/HW4.sdk/HW4_IP_SDK/Debug/HW4_IP_SDK.elf' is downloaded to processor 'ps7_cortexa9_0'.
+03:29:39 INFO  : 'configparams force-mem-access 0' command is executed.
+03:29:39 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/SOPC/HW4/HW4/HW4/HW4.sdk/HW4_system_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zed 210248708024"} -index 0
+loadhw -hw C:/SOPC/HW4/HW4/HW4/HW4.sdk/HW4_system_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zed 210248708024"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248708024"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248708024"} -index 0
+dow C:/SOPC/HW4/HW4/HW4/HW4.sdk/HW4_IP_SDK/Debug/HW4_IP_SDK.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+03:29:39 INFO  : Memory regions updated for context APU
+03:29:39 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+03:29:39 INFO  : 'con' command is executed.
+03:29:39 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248708024"} -index 0
+con
+----------------End of Script----------------
+
+03:29:39 INFO  : Launch script is exported to file 'C:\SOPC\HW4\HW4\HW4\HW4.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_hw4_ip_sdk.elf_on_local.tcl'
+03:36:30 INFO  : Disconnected from the channel tcfchan#3.
+21:10:19 INFO  : Registering command handlers for SDK TCF services
+21:10:20 INFO  : Launching XSCT server: xsct.bat -interactive C:\Users\ryanh\Downloads\HW4\HW4\HW4.sdk\temp_xsdb_launch_script.tcl
+21:10:22 INFO  : XSCT server has started successfully.
+21:10:22 INFO  : Successfully done setting XSCT server connection channel  
+21:10:26 INFO  : Successfully done setting SDK workspace  
+21:10:26 INFO  : Processing command line option -hwspec C:/Users/ryanh/Downloads/HW4/HW4/HW4.sdk/HW4_system_wrapper.hdf.
+21:40:55 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:40:55 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248BE0D1E" && level==0} -index 1' command is executed.
+21:40:57 INFO  : FPGA configured successfully with bitstream "C:/Users/ryanh/Downloads/HW4/HW4/HW4.sdk/HW4_system_wrapper_hw_platform_0/HW4_system_wrapper.bit"
+21:41:11 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248BE0D1E" && level==0} -index 1' command is executed.
+21:41:11 INFO  : 'fpga -state' command is executed.
+21:41:11 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:41:11 INFO  : Jtag cable 'Digilent Zed 210248BE0D1E' is selected.
+21:41:11 INFO  : 'jtag frequency' command is executed.
+21:41:11 INFO  : Sourcing of 'C:/Users/ryanh/Downloads/HW4/HW4/HW4.sdk/HW4_system_wrapper_hw_platform_0/ps7_init.tcl' is done.
+21:41:11 INFO  : Context for 'APU' is selected.
+21:41:11 INFO  : Hardware design information is loaded from 'C:/Users/ryanh/Downloads/HW4/HW4/HW4.sdk/HW4_system_wrapper_hw_platform_0/system.hdf'.
+21:41:11 INFO  : 'configparams force-mem-access 1' command is executed.
+21:41:11 INFO  : Context for 'APU' is selected.
+21:41:12 INFO  : 'stop' command is executed.
+21:41:12 INFO  : 'ps7_init' command is executed.
+21:41:12 INFO  : 'ps7_post_config' command is executed.
+21:41:12 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:41:12 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+21:41:12 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:41:12 INFO  : The application 'C:/Users/ryanh/Downloads/HW4/HW4/HW4.sdk/HW4_IP_SDK/Debug/HW4_IP_SDK.elf' is downloaded to processor 'ps7_cortexa9_0'.
+21:41:12 INFO  : 'configparams force-mem-access 0' command is executed.
+21:41:12 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/ryanh/Downloads/HW4/HW4/HW4.sdk/HW4_system_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zed 210248BE0D1E"} -index 0
+loadhw -hw C:/Users/ryanh/Downloads/HW4/HW4/HW4.sdk/HW4_system_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zed 210248BE0D1E"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248BE0D1E"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248BE0D1E"} -index 0
+dow C:/Users/ryanh/Downloads/HW4/HW4/HW4.sdk/HW4_IP_SDK/Debug/HW4_IP_SDK.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+21:41:12 INFO  : Memory regions updated for context APU
+21:41:12 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:41:12 INFO  : 'con' command is executed.
+21:41:12 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248BE0D1E"} -index 0
+con
+----------------End of Script----------------
+
+21:41:12 INFO  : Launch script is exported to file 'C:\Users\ryanh\Downloads\HW4\HW4\HW4.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_hw4_ip_sdk.elf_on_local.tcl'
+21:42:51 INFO  : Disconnected from the channel tcfchan#1.
+21:42:52 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248BE0D1E" && level==0} -index 1' command is executed.
+21:42:52 INFO  : 'fpga -state' command is executed.
+21:42:52 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:42:52 INFO  : Jtag cable 'Digilent Zed 210248BE0D1E' is selected.
+21:42:52 INFO  : 'jtag frequency' command is executed.
+21:42:52 INFO  : Sourcing of 'C:/Users/ryanh/Downloads/HW4/HW4/HW4.sdk/HW4_system_wrapper_hw_platform_0/ps7_init.tcl' is done.
+21:42:52 INFO  : Context for 'APU' is selected.
+21:42:53 INFO  : Hardware design information is loaded from 'C:/Users/ryanh/Downloads/HW4/HW4/HW4.sdk/HW4_system_wrapper_hw_platform_0/system.hdf'.
+21:42:53 INFO  : 'configparams force-mem-access 1' command is executed.
+21:42:53 INFO  : Context for 'APU' is selected.
+21:42:53 INFO  : 'stop' command is executed.
+21:42:53 INFO  : 'ps7_init' command is executed.
+21:42:53 INFO  : 'ps7_post_config' command is executed.
+21:42:53 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:42:53 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+21:42:53 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:42:53 INFO  : The application 'C:/Users/ryanh/Downloads/HW4/HW4/HW4.sdk/HW4_IP_SDK/Debug/HW4_IP_SDK.elf' is downloaded to processor 'ps7_cortexa9_0'.
+21:42:53 INFO  : 'configparams force-mem-access 0' command is executed.
+21:42:53 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/ryanh/Downloads/HW4/HW4/HW4.sdk/HW4_system_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zed 210248BE0D1E"} -index 0
+loadhw -hw C:/Users/ryanh/Downloads/HW4/HW4/HW4.sdk/HW4_system_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zed 210248BE0D1E"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248BE0D1E"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248BE0D1E"} -index 0
+dow C:/Users/ryanh/Downloads/HW4/HW4/HW4.sdk/HW4_IP_SDK/Debug/HW4_IP_SDK.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+21:42:53 INFO  : Memory regions updated for context APU
+21:42:54 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:42:54 INFO  : 'con' command is executed.
+21:42:54 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248BE0D1E"} -index 0
+con
+----------------End of Script----------------
+
+21:42:54 INFO  : Launch script is exported to file 'C:\Users\ryanh\Downloads\HW4\HW4\HW4.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_hw4_ip_sdk.elf_on_local.tcl'
+21:44:12 INFO  : Disconnected from the channel tcfchan#2.
+21:44:13 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248BE0D1E" && level==0} -index 1' command is executed.
+21:44:14 INFO  : 'fpga -state' command is executed.
+21:44:14 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:44:14 INFO  : Jtag cable 'Digilent Zed 210248BE0D1E' is selected.
+21:44:14 INFO  : 'jtag frequency' command is executed.
+21:44:14 INFO  : Sourcing of 'C:/Users/ryanh/Downloads/HW4/HW4/HW4.sdk/HW4_system_wrapper_hw_platform_0/ps7_init.tcl' is done.
+21:44:14 INFO  : Context for 'APU' is selected.
+21:44:14 INFO  : Hardware design information is loaded from 'C:/Users/ryanh/Downloads/HW4/HW4/HW4.sdk/HW4_system_wrapper_hw_platform_0/system.hdf'.
+21:44:14 INFO  : 'configparams force-mem-access 1' command is executed.
+21:44:14 INFO  : Context for 'APU' is selected.
+21:44:14 INFO  : 'stop' command is executed.
+21:44:14 INFO  : 'ps7_init' command is executed.
+21:44:14 INFO  : 'ps7_post_config' command is executed.
+21:44:14 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:44:14 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+21:44:14 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:44:14 INFO  : The application 'C:/Users/ryanh/Downloads/HW4/HW4/HW4.sdk/HW4_IP_SDK/Debug/HW4_IP_SDK.elf' is downloaded to processor 'ps7_cortexa9_0'.
+21:44:14 INFO  : 'configparams force-mem-access 0' command is executed.
+21:44:14 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/ryanh/Downloads/HW4/HW4/HW4.sdk/HW4_system_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zed 210248BE0D1E"} -index 0
+loadhw -hw C:/Users/ryanh/Downloads/HW4/HW4/HW4.sdk/HW4_system_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zed 210248BE0D1E"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248BE0D1E"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248BE0D1E"} -index 0
+dow C:/Users/ryanh/Downloads/HW4/HW4/HW4.sdk/HW4_IP_SDK/Debug/HW4_IP_SDK.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+21:44:14 INFO  : Memory regions updated for context APU
+21:44:14 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:44:14 INFO  : 'con' command is executed.
+21:44:14 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248BE0D1E"} -index 0
+con
+----------------End of Script----------------
+
+21:44:14 INFO  : Launch script is exported to file 'C:\Users\ryanh\Downloads\HW4\HW4\HW4.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_hw4_ip_sdk.elf_on_local.tcl'
+21:45:11 INFO  : Disconnected from the channel tcfchan#3.
+21:45:12 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248BE0D1E" && level==0} -index 1' command is executed.
+21:45:12 INFO  : 'fpga -state' command is executed.
+21:45:12 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:45:13 INFO  : Jtag cable 'Digilent Zed 210248BE0D1E' is selected.
+21:45:13 INFO  : 'jtag frequency' command is executed.
+21:45:13 INFO  : Sourcing of 'C:/Users/ryanh/Downloads/HW4/HW4/HW4.sdk/HW4_system_wrapper_hw_platform_0/ps7_init.tcl' is done.
+21:45:13 INFO  : Context for 'APU' is selected.
+21:45:13 INFO  : Hardware design information is loaded from 'C:/Users/ryanh/Downloads/HW4/HW4/HW4.sdk/HW4_system_wrapper_hw_platform_0/system.hdf'.
+21:45:13 INFO  : 'configparams force-mem-access 1' command is executed.
+21:45:13 INFO  : Context for 'APU' is selected.
+21:45:13 INFO  : 'stop' command is executed.
+21:45:13 INFO  : 'ps7_init' command is executed.
+21:45:13 INFO  : 'ps7_post_config' command is executed.
+21:45:13 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:45:13 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+21:45:13 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:45:13 INFO  : The application 'C:/Users/ryanh/Downloads/HW4/HW4/HW4.sdk/HW4_IP_SDK/Debug/HW4_IP_SDK.elf' is downloaded to processor 'ps7_cortexa9_0'.
+21:45:13 INFO  : 'configparams force-mem-access 0' command is executed.
+21:45:13 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/ryanh/Downloads/HW4/HW4/HW4.sdk/HW4_system_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zed 210248BE0D1E"} -index 0
+loadhw -hw C:/Users/ryanh/Downloads/HW4/HW4/HW4.sdk/HW4_system_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zed 210248BE0D1E"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248BE0D1E"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248BE0D1E"} -index 0
+dow C:/Users/ryanh/Downloads/HW4/HW4/HW4.sdk/HW4_IP_SDK/Debug/HW4_IP_SDK.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+21:45:13 INFO  : Memory regions updated for context APU
+21:45:13 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:45:13 INFO  : 'con' command is executed.
+21:45:13 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248BE0D1E"} -index 0
+con
+----------------End of Script----------------
+
+21:45:13 INFO  : Launch script is exported to file 'C:\Users\ryanh\Downloads\HW4\HW4\HW4.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_hw4_ip_sdk.elf_on_local.tcl'
+22:17:33 INFO  : Disconnected from the channel tcfchan#4.
