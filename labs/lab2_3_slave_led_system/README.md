@@ -11,6 +11,7 @@
     * add ZYNQ-7000 PS, LED IP to block design
     * run block, connection automation
     * make `LED` port external in slave IP
+    * validate design
     * create HDL wrapper
     * generate bitstream
 3. **Execute in SDK**
