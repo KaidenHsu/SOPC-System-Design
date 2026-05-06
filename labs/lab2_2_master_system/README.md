@@ -12,6 +12,7 @@
     * enable `S AXI HP0` interface (bridge IP: `New AXI Interconnect`)
     * set our IP's `C_M00_AXI_TARGET_SLAVE_BASE_ADDR` to 0x10000000
     * run connection automation
+    * validate design
     * create HDL wrapper
     * generate bitstream
 3. **Execute in SDK**

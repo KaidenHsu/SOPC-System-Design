@@ -11,6 +11,7 @@
     * add ZYNQ-7000 PS, calculator IP to block design
     * run block, connection automation wizards
     * add ILA core
+    * validate design
     * create HDL wrapper
     * generate bitstream
 3. **Execute in SDK (Part 1.2)**

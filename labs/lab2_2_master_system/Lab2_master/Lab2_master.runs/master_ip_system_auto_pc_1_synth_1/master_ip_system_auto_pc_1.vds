@@ -1,0 +1,17 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Tue May  5 15:38:29 2026
+# Process ID: 31960
+# Current directory: C:/Users/ryanh/Lab2_master/Lab2_master.runs/master_ip_system_auto_pc_1_synth_1
+# Command line: vivado.exe -log master_ip_system_auto_pc_1.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source master_ip_system_auto_pc_1.tcl
+# Log file: C:/Users/ryanh/Lab2_master/Lab2_master.runs/master_ip_system_auto_pc_1_synth_1/master_ip_system_auto_pc_1.vds
+# Journal file: C:/Users/ryanh/Lab2_master/Lab2_master.runs/master_ip_system_auto_pc_1_synth_1\vivado.jou
+#-----------------------------------------------------------
+source master_ip_system_auto_pc_1.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/ryanh/ip_repo/Lab2_master_ip_1.0'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.3/data/ip'.
+INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP master_ip_system_auto_pc_1, cache-ID = 22f0a1f786bc0cb6.
+INFO: [Common 17-206] Exiting Vivado at Tue May  5 15:38:32 2026...

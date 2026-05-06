@@ -1,0 +1,4 @@
+
+*** Running vivado
+    with args -log master_ip_system_auto_pc_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source master_ip_system_auto_pc_0.tcl
+

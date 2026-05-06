@@ -7,6 +7,7 @@
     * create block design
     * add `LED.v` by [referencing a module][1] (⚠️ we do not package `LED.v` as an IP in this lab!)
     * make ports external (so it is visible to peripherals)
+    * validate design
     * create HDL wrapper
 3. **Add `LED_constraint.xdc`**
 4. **Generate Bitstream**
