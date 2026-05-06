@@ -36,7 +36,7 @@ Base Address: `0x43c0000`
 
 ## 3. Recap: Hw2 VMM IP Circuit
 
-<img src="images/VMM.png" alt="VMM" width="560" align="middle" />
+<img src="images/VMM.png" alt="VMM" width="500" align="middle" />
 ▲ VMM module Block Diagram
 
 ## 4. SDK Execution
@@ -147,5 +147,5 @@ int main() {
 }
 ```
 
-<img src="images/demo.png" alt="demo" width="280" align="middle" />
+<img src="images/demo.png" alt="demo" width="420" align="middle" />
 ▲ SDK Execution Result
