@@ -19,7 +19,7 @@
 
 ## 2. Slave IP and System Design
 
-<img src="images/vivado_block_design.png" alt="vivado block design" width="840" align="middle" />
+<img src="images/vivado_block_design.png" alt="vivado block design" width="600" align="middle" />
 ▲ Vivado Block Design
 
 ## 3. SDK Application Program
