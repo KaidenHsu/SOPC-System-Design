@@ -1,0 +1,194 @@
+[*]
+[*] GTKWave Analyzer v4.0.0-prealpha (1dbe6d0) (w)1999-2022 BSI
+[*] Mon Mar 30 15:51:07 2026
+[*]
+[dumpfile] "/Users/botai/Documents/temp/SOPC_Hw1/hw2.vcd"
+[dumpfile_mtime] "Mon Mar 30 15:48:57 2026"
+[dumpfile_size] 17246
+[savefile] "/Users/botai/Documents/temp/SOPC_Hw1/vmm.gtkw"
+[timestart] 44700
+[size] 2560 1440
+[pos] -1 -1
+*-14.518637 74000 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+[markername] AA
+[markername] BB
+[markername] CC
+[markername] DD
+[markername] EE
+[markername] FF
+[markername] GG
+[markername] HH
+[markername] II
+[markername] JJ
+[markername] KK
+[markername] LL
+[markername] MM
+[markername] NN
+[markername] OO
+[markername] PP
+[markername] QQ
+[markername] RR
+[markername] SS
+[markername] TT
+[markername] UU
+[markername] VV
+[markername] WW
+[markername] XX
+[markername] YY
+[markername] ZZ
+[treeopen] TOP.
+[treeopen] TOP.hw2_tb.
+[treeopen] TOP.hw2_tb.dut.
+[sst_width] 40
+[signals_width] 668
+[sst_expanded] 0
+[sst_vpaned_height] 229
+@200
+-
+@28
+[color] 1
+TOP.hw2_tb.dut.u_vmm.clk
+[color] 1
+TOP.hw2_tb.dut.u_vmm.rst
+@200
+-
+@28
+[color] 2
+TOP.hw2_tb.dut.u_vmm.start
+@24
+[color] 2
+TOP.hw2_tb.dut.u_vmm.M[5:0]
+[color] 2
+TOP.hw2_tb.dut.u_vmm.N[5:0]
+@22
+[color] 2
+TOP.hw2_tb.dut.u_vmm.rdata[63:0]
+@200
+-
+@24
+TOP.hw2_tb.dut.u_vmm.M_buf[5:0]
+TOP.hw2_tb.dut.u_vmm.N_buf[5:0]
+@22
+TOP.hw2_tb.dut.u_vmm.vec[255:0]
+TOP.hw2_tb.dut.u_vmm.vec_shadow[255:0]
+@200
+-
+@24
+[color] 3
+TOP.hw2_tb.dut.u_vmm.vec_counter[1:0]
+[color] 3
+TOP.hw2_tb.dut.u_vmm.col_counter[5:0]
+[color] 3
+TOP.hw2_tb.dut.u_vmm.row_counter[1:0]
+@200
+-
+@28
+[color] 2
+TOP.hw2_tb.dut.u_vmm.ren
+@24
+[color] 2
+TOP.hw2_tb.dut.u_vmm.raddr[8:0]
+@28
+[color] 2
+TOP.hw2_tb.dut.u_vmm.wen
+@24
+[color] 2
+TOP.hw2_tb.dut.u_vmm.waddr[5:0]
+@420
+[color] 2
+TOP.hw2_tb.dut.u_vmm.wdata[11:0]
+[color] 2
+TOP.hw2_tb.dut.u_vmm.next_wdata[11:0]
+@28
+[color] 2
+TOP.hw2_tb.dut.u_vmm.finish
+@200
+-
+@24
+[color] 6
+TOP.hw2_tb.dut.u_vmm.state[2:0]
+[color] 6
+TOP.hw2_tb.dut.u_vmm.n_state[2:0]
+[color] 6
+TOP.hw2_tb.dut.u_vmm.S_IDLE[31:0]
+[color] 6
+TOP.hw2_tb.dut.u_vmm.S_WAIT_SRAM[31:0]
+@c00024
+[color] 6
+TOP.hw2_tb.dut.u_vmm.S_RD_VEC[31:0]
+@28
+[color] 6
+(0)TOP.hw2_tb.dut.u_vmm.S_RD_VEC[31:0]
+[color] 6
+(1)TOP.hw2_tb.dut.u_vmm.S_RD_VEC[31:0]
+[color] 6
+(2)TOP.hw2_tb.dut.u_vmm.S_RD_VEC[31:0]
+[color] 6
+(3)TOP.hw2_tb.dut.u_vmm.S_RD_VEC[31:0]
+[color] 6
+(4)TOP.hw2_tb.dut.u_vmm.S_RD_VEC[31:0]
+[color] 6
+(5)TOP.hw2_tb.dut.u_vmm.S_RD_VEC[31:0]
+[color] 6
+(6)TOP.hw2_tb.dut.u_vmm.S_RD_VEC[31:0]
+[color] 6
+(7)TOP.hw2_tb.dut.u_vmm.S_RD_VEC[31:0]
+[color] 6
+(8)TOP.hw2_tb.dut.u_vmm.S_RD_VEC[31:0]
+[color] 6
+(9)TOP.hw2_tb.dut.u_vmm.S_RD_VEC[31:0]
+[color] 6
+(10)TOP.hw2_tb.dut.u_vmm.S_RD_VEC[31:0]
+[color] 6
+(11)TOP.hw2_tb.dut.u_vmm.S_RD_VEC[31:0]
+[color] 6
+(12)TOP.hw2_tb.dut.u_vmm.S_RD_VEC[31:0]
+[color] 6
+(13)TOP.hw2_tb.dut.u_vmm.S_RD_VEC[31:0]
+[color] 6
+(14)TOP.hw2_tb.dut.u_vmm.S_RD_VEC[31:0]
+[color] 6
+(15)TOP.hw2_tb.dut.u_vmm.S_RD_VEC[31:0]
+[color] 6
+(16)TOP.hw2_tb.dut.u_vmm.S_RD_VEC[31:0]
+[color] 6
+(17)TOP.hw2_tb.dut.u_vmm.S_RD_VEC[31:0]
+[color] 6
+(18)TOP.hw2_tb.dut.u_vmm.S_RD_VEC[31:0]
+[color] 6
+(19)TOP.hw2_tb.dut.u_vmm.S_RD_VEC[31:0]
+[color] 6
+(20)TOP.hw2_tb.dut.u_vmm.S_RD_VEC[31:0]
+[color] 6
+(21)TOP.hw2_tb.dut.u_vmm.S_RD_VEC[31:0]
+[color] 6
+(22)TOP.hw2_tb.dut.u_vmm.S_RD_VEC[31:0]
+[color] 6
+(23)TOP.hw2_tb.dut.u_vmm.S_RD_VEC[31:0]
+[color] 6
+(24)TOP.hw2_tb.dut.u_vmm.S_RD_VEC[31:0]
+[color] 6
+(25)TOP.hw2_tb.dut.u_vmm.S_RD_VEC[31:0]
+[color] 6
+(26)TOP.hw2_tb.dut.u_vmm.S_RD_VEC[31:0]
+[color] 6
+(27)TOP.hw2_tb.dut.u_vmm.S_RD_VEC[31:0]
+[color] 6
+(28)TOP.hw2_tb.dut.u_vmm.S_RD_VEC[31:0]
+[color] 6
+(29)TOP.hw2_tb.dut.u_vmm.S_RD_VEC[31:0]
+[color] 6
+(30)TOP.hw2_tb.dut.u_vmm.S_RD_VEC[31:0]
+[color] 6
+(31)TOP.hw2_tb.dut.u_vmm.S_RD_VEC[31:0]
+@1401200
+-group_end
+@24
+[color] 6
+TOP.hw2_tb.dut.u_vmm.S_VMM[31:0]
+[color] 6
+TOP.hw2_tb.dut.u_vmm.S_OUTPUT[31:0]
+[color] 6
+TOP.hw2_tb.dut.u_vmm.S_DONE[31:0]
+[pattern_trace] 1
+[pattern_trace] 0

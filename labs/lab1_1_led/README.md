@@ -1,4 +1,4 @@
-# Lab 1.1 LED Block Design Warmup
+# Lab 1.1 Warmup: LED Block Design
 
 ## 1. Steps
 

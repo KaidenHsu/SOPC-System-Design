@@ -1,0 +1,18 @@
+verilog xil_defaultlib --include "../../../../HW4.srcs/sources_1/bd/HW4_system/ipshared/ec67/hdl" --include "../../../../HW4.srcs/sources_1/bd/HW4_system/ipshared/70cf/hdl" --include "../../../../HW4.srcs/sources_1/bd/HW4_system/ip/HW4_system_processing_system7_0_0" --include "../../../../HW4.srcs/sources_1/bd/HW4_system/ipshared/c5fd/src" \
+"../../../bd/HW4_system/ip/HW4_system_processing_system7_0_0/sim/HW4_system_processing_system7_0_0.v" \
+"../../../bd/HW4_system/ipshared/c5fd/hdl/HW4IP_v1_0_S00_AXI.v" \
+"../../../bd/HW4_system/ipshared/c5fd/src/hw2.v" \
+"../../../bd/HW4_system/ipshared/c5fd/src/sram.v" \
+
+sv xil_defaultlib --include "../../../../HW4.srcs/sources_1/bd/HW4_system/ipshared/ec67/hdl" --include "../../../../HW4.srcs/sources_1/bd/HW4_system/ipshared/70cf/hdl" --include "../../../../HW4.srcs/sources_1/bd/HW4_system/ip/HW4_system_processing_system7_0_0" --include "../../../../HW4.srcs/sources_1/bd/HW4_system/ipshared/c5fd/src" \
+"../../../bd/HW4_system/ipshared/c5fd/src/VMM.sv" \
+
+verilog xil_defaultlib --include "../../../../HW4.srcs/sources_1/bd/HW4_system/ipshared/ec67/hdl" --include "../../../../HW4.srcs/sources_1/bd/HW4_system/ipshared/70cf/hdl" --include "../../../../HW4.srcs/sources_1/bd/HW4_system/ip/HW4_system_processing_system7_0_0" --include "../../../../HW4.srcs/sources_1/bd/HW4_system/ipshared/c5fd/src" \
+"../../../bd/HW4_system/ipshared/c5fd/hdl/HW4IP_v1_0.v" \
+"../../../bd/HW4_system/ip/HW4_system_HW4IP_0_0/sim/HW4_system_HW4IP_0_0.v" \
+"../../../bd/HW4_system/sim/HW4_system.v" \
+"../../../bd/HW4_system/ip/HW4_system_auto_pc_0/sim/HW4_system_auto_pc_0.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+nosort
