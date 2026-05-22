@@ -9,7 +9,7 @@
 --------|:-----
 [Hw1][1.1]| Self-Attention C Golden Models
 [Hw2][1.2]| Vector-Matrix Multiplication IP Circuit
-[Hw3][1.3]| RGB-YUV AMBA 2.0 Conversion IP, AXI-Lite Wrapper
+[Hw3][1.3]| RGB-YUV AMBA 2.0 Conversion IP & AXI-Lite Wrapper
 [Hw4][1.4]| VMM AXI-Lite Slave IP System
 
 [1.1]: hws/hw1/
@@ -26,7 +26,7 @@ Labs | Description
 [Lab2.1][2.2.1]| Calculator AXI-Lite Slave IP System
 [Lab2.2][2.2.2]| Data Generator AXI Master IP System
 [Lab2.3][2.2.3]| Exercise: LED AXI-Lite Slave IP System
-[Lab3][2.3]| Embedded PetaLinux SD Card Boot, Calculator Driver
+[Lab3][2.3]| Embedded PetaLinux SD Card Boot & Calculator Driver
 
 [2.1.1]: labs/lab1_1_led/
 [2.1.2]: labs/lab1_2_llm/

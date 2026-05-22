@@ -1,4 +1,4 @@
-# Lab 3. Embedded PetaLinux SD Card Boot and Adder Driver Development
+# Lab 3. Embedded PetaLinux SD Card Boot & Calculator Driver
 
 ## 1. Introduction
 
