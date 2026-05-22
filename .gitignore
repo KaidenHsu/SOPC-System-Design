@@ -1,2 +1,19 @@
 __pycache__/
 *.pyclabs/lab3/lab_files/
+
+# Vivado logs
+*.jou
+*.log
+*.backup.jou
+*.backup.log
+
+# Vivado generated files
+*.runs/
+*.cache/
+*.ip_user_files/
+*.sim/
+*.sdk/webtalk/
+*.hw/webtalk/
+
+# SDK metadata
+.metadata/
