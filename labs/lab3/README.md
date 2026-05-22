@@ -254,7 +254,7 @@ The original PetaLinux driver template only provides a Platform Driver skeleton.
 
 On MobaXterm, connect to the corresponding COM port and set baud rate to 115200
 
-``` bash
+```
 alarm login: root
 [root@alarm ~]# ls
 [root@alarm ~]# mkdir fat
