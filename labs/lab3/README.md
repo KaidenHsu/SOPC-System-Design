@@ -71,7 +71,7 @@ $ petalinux-build                                 # build kernel, device tree, a
 $ petalinux-create -t modules -n adder --enable
 ```
 
-> Replace the generated template `adder.c` with the provided `adder.c`.  
+> Replace the generated generic template `adder.c` with the provided `adder.c`.  
 > Open `component/plnx_workspace/device-tree/device-tree/pl.dtsi`, copy the `compatible`
 > string (e.g. `"xlnx,final-1.0"`), and update `adder_of_match` in `adder.c` to match.
 
@@ -114,7 +114,7 @@ Open `ext4/etc/security/securetty` and `ext4/etc/passwd` (via `sudo nautilus`) a
     <img src="images/driver_call.png" alt="driver call hierarchy" height="630" />
 </p>
 
-### adder.cpp
+### `adder.cpp`: application program
 
 User-space test application: opens `/dev/adder-master` and runs all four arithmetic operations.
 
@@ -151,7 +151,7 @@ $ source ~/build/settings.sh
 $ arm-linux-gnueabihf-g++ -fPIE -pie adder.cpp -o adder
 ```
 
-### adder.c
+### `adder.c`: driver kernel module source code
 
 Linux kernel module implementing a platform driver + character device at `/dev/adder-master`.
 
@@ -312,6 +312,6 @@ in output_d
 div : 2
 ```
 
-## 10.Conclusion
+## 10. Conclusion
 
-This lab demonstrated a full FPGA-Linux co-design flow on the Zedboard. We used PetaLinux to build a bootable SD card image, wrote a Linux kernel platform driver with a character device interface, and verified that user-space `ioctl` calls correctly drive the FPGA adder IP — returning the expected add (150), sub (50), mul (5000), and div (2) results. The key takeaway is the driver architecture: the Platform Driver binds to hardware via the Device Tree `compatible` string, while the Character Device provides the `/dev/adder-master` file interface that user-space programs use through standard POSIX file operations.
+This lab demonstrated a full FPGA-Linux co-design flow on the Zedboard. We used PetaLinux to build a bootable SD card image, wrote a Linux kernel platform driver with a character device interface, and verified that user-space `ioctl` calls correctly drive the FPGA calculator IP — returning the expected add (150), sub (50), mul (5000), and div (2) results. The key takeaway is the driver architecture: the Platform Driver binds to hardware via the Device Tree `compatible` string, while the Character Device provides the `/dev/adder-master` file interface that user-space programs use through standard POSIX file operations.
