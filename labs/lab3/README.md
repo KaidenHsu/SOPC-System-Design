@@ -5,6 +5,7 @@
 This lab builds a complete embedded Linux system on the Zedboard that integrates custom FPGA hardware (PL) with ARM Linux software (PS). Using PetaLinux, we generate a bootable SD card image, then write a Linux kernel driver that exposes a memory-mapped FPGA adder IP core as a character device. A user-space application communicates with the hardware through standard `ioctl` calls, demonstrating the full PS-PL co-design flow.
 
 * This `README` preserves only key steps, please refer to `lab3.pdf` for full process.
+- `avnet-digilent-zedboard-v2018.3-final.bsp` and `ArchLinuxARM-zedboard-latest.tar` are not provided here due to GitHub file size limitations.
 
 ## 2. Requirements
 
