@@ -11,11 +11,13 @@
 [Hw2][1.2]| Vector-Matrix Multiplication IP Circuit
 [Hw3][1.3]| RGB-YUV AMBA 2.0 Conversion IP & AXI-Lite Wrapper
 [Hw4][1.4]| VMM AXI-Lite Slave IP System
+[Hw5][1.5]| Embedded PetaLinux VMM Char Device Driver
 
 [1.1]: hws/hw1/
 [1.2]: hws/hw2/
 [1.3]: hws/hw3/
 [1.4]: hws/hw4/
+[1.5]: hws/hw5/
 
 ## Labs
 
