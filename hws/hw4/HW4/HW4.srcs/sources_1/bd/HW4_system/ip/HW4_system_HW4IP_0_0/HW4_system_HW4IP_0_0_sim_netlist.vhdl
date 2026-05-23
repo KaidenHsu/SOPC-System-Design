@@ -3,8 +3,8 @@
 -- Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
 -- Date        : Sat May 23 12:01:55 2026
 -- Host        : kaiden running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim
---               C:/Users/ryanh/Documents/Courses/1-2/SOPCDesignPracticeAndFPGASystemsDesign/hws/hw5/HW4/HW4.srcs/sources_1/bd/HW4_system/ip/HW4_system_HW4IP_0_0/HW4_system_HW4IP_0_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top HW4_system_HW4IP_0_0 -prefix
+--               HW4_system_HW4IP_0_0_ HW4_system_HW4IP_0_0_sim_netlist.vhdl
 -- Design      : HW4_system_HW4IP_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -204,8 +204,6 @@ entity HW4_system_HW4IP_0_0_VMM is
     s00_axi_aclk : in STD_LOGIC;
     \M_buf_reg[5]_0\ : in STD_LOGIC_VECTOR ( 7 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of HW4_system_HW4IP_0_0_VMM : entity is "VMM";
 end HW4_system_HW4IP_0_0_VMM;
 
 architecture STRUCTURE of HW4_system_HW4IP_0_0_VMM is
@@ -17012,8 +17010,6 @@ entity HW4_system_HW4IP_0_0_sram is
     ADDRARDADDR : in STD_LOGIC_VECTOR ( 8 downto 0 );
     WEA : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of HW4_system_HW4IP_0_0_sram : entity is "sram";
 end HW4_system_HW4IP_0_0_sram;
 
 architecture STRUCTURE of HW4_system_HW4IP_0_0_sram is
@@ -21030,8 +21026,6 @@ entity HW4_system_HW4IP_0_0_hw2 is
     \axi_rdata_reg[11]_1\ : in STD_LOGIC;
     \M_buf_reg[5]\ : in STD_LOGIC_VECTOR ( 7 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of HW4_system_HW4IP_0_0_hw2 : entity is "hw2";
 end HW4_system_HW4IP_0_0_hw2;
 
 architecture STRUCTURE of HW4_system_HW4IP_0_0_hw2 is
@@ -21657,8 +21651,6 @@ entity HW4_system_HW4IP_0_0_HW4IP_v1_0_S00_AXI is
     s00_axi_araddr : in STD_LOGIC_VECTOR ( 2 downto 0 );
     s00_axi_aresetn : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of HW4_system_HW4IP_0_0_HW4IP_v1_0_S00_AXI : entity is "HW4IP_v1_0_S00_AXI";
 end HW4_system_HW4IP_0_0_HW4IP_v1_0_S00_AXI;
 
 architecture STRUCTURE of HW4_system_HW4IP_0_0_HW4IP_v1_0_S00_AXI is
@@ -25084,8 +25076,6 @@ entity HW4_system_HW4IP_0_0_HW4IP_v1_0 is
     s00_axi_araddr : in STD_LOGIC_VECTOR ( 2 downto 0 );
     s00_axi_aresetn : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of HW4_system_HW4IP_0_0_HW4IP_v1_0 : entity is "HW4IP_v1_0";
 end HW4_system_HW4IP_0_0_HW4IP_v1_0;
 
 architecture STRUCTURE of HW4_system_HW4IP_0_0_HW4IP_v1_0 is

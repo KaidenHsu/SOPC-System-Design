@@ -3,8 +3,8 @@
 // Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
 // Date        : Sat May 23 12:01:55 2026
 // Host        : kaiden running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode synth_stub
-//               C:/Users/ryanh/Documents/Courses/1-2/SOPCDesignPracticeAndFPGASystemsDesign/hws/hw5/HW4/HW4.srcs/sources_1/bd/HW4_system/ip/HW4_system_HW4IP_0_0/HW4_system_HW4IP_0_0_stub.v
+// Command     : write_verilog -force -mode synth_stub -rename_top HW4_system_HW4IP_0_0 -prefix
+//               HW4_system_HW4IP_0_0_ HW4_system_HW4IP_0_0_stub.v
 // Design      : HW4_system_HW4IP_0_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7z020clg484-1

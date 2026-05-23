@@ -409,13 +409,13 @@
 	always @(*)
     begin
           case ( axi_araddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB] )
-            3'h0   : reg_data_out = {30'b0, finish_latched, slv_reg0[0]}; // 讀取鎖存的 finish
+			3'h0   : reg_data_out = {30'b0, finish_latched, slv_reg0[0]}; // readback: finish status
             3'h1   : reg_data_out = slv_reg1;
             3'h2   : reg_data_out = slv_reg2;
             3'h3   : reg_data_out = slv_reg3;
             3'h4   : reg_data_out = slv_reg4;
             3'h5   : reg_data_out = slv_reg5;
-            3'h6   : reg_data_out = {20'b0, hw2_axi_out_data}; // 讀取 SRAM 結果
+			3'h6   : reg_data_out = {20'b0, hw2_axi_out_data}; // readback: SRAM output data
             3'h7   : reg_data_out = slv_reg7;
             default : reg_data_out = 0;
           endcase
@@ -444,13 +444,13 @@
     wire hw2_finish;
     wire [11:0] hw2_axi_out_data; 
     
-    // 當 CPU 寫入 Reg4 時，產生 1 cycle 的 SRAM 寫入致能訊號
-    wire is_writing_reg4 = (slv_reg_wren && axi_awaddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB] == 3'h4);
+	// When CPU writes Reg4: perform a 1-cycle SRAM write
+	wire is_writing_reg4 = (slv_reg_wren && axi_awaddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB] == 3'h4);
     
-    // --- 脈衝產生器與狀態鎖存邏輯 ---
+	// --- Control and pulse handling ---
     reg finish_latched;
     reg start_delay;
-    wire start_pulse = slv_reg0[0] & ~start_delay; // 將 CPU 長電平轉為 1 cycle 脈衝
+	wire start_pulse = slv_reg0[0] & ~start_delay; // generate 1-cycle start pulse when CPU sets start
 
     always @(posedge S_AXI_ACLK) begin
         if (~S_AXI_ARESETN) begin
@@ -458,32 +458,32 @@
             start_delay <= 1'b0;
         end else begin
             start_delay <= slv_reg0[0]; 
-            if (start_pulse) begin
-                finish_latched <= 1'b0; // 新運算開始，清空完成狀態
-            end 
-            else if (hw2_finish) begin
-                finish_latched <= 1'b1; // 抓取並鎖死完成狀態，等 CPU 讀取
-            end
+			if (start_pulse) begin
+				finish_latched <= 1'b0; // clear latched finish on new start
+			end 
+			else if (hw2_finish) begin
+				finish_latched <= 1'b1; // latch finish on hw2 completion so CPU can read it
+			end
         end
     end
 
-    // 實例化 hw2
+	// instantiate hw2
     hw2 u_hw2 (
         .clk(S_AXI_ACLK),
         .rst(~S_AXI_ARESETN), 
         
-        .start(start_pulse),  // 送入完美的 1 cycle 脈衝
+		.start(start_pulse),  // start is a 1-cycle pulse
         .M(slv_reg1[13:8]),   
         .N(slv_reg1[5:0]),    
         .finish(hw2_finish),
 
-        // 32-bit 轉 64-bit 寫入介面
+		// pack two 32-bit words into 64-bit AXI input data
         .axi_in_we(is_writing_reg4),
         .axi_in_en(1'b1),
         .axi_in_addr(slv_reg2[15:0]), 
         .axi_in_data({S_AXI_WDATA, slv_reg3}), 
 
-        // 讀取介面
+		// output readback interface
         .axi_out_en(1'b1),
         .axi_out_addr(slv_reg5[5:0]),
         .axi_out_data(hw2_axi_out_data)

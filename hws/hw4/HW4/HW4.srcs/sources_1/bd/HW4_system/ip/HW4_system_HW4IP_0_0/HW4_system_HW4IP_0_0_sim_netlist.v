@@ -3,8 +3,8 @@
 // Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
 // Date        : Sat May 23 12:01:55 2026
 // Host        : kaiden running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim
-//               C:/Users/ryanh/Documents/Courses/1-2/SOPCDesignPracticeAndFPGASystemsDesign/hws/hw5/HW4/HW4.srcs/sources_1/bd/HW4_system/ip/HW4_system_HW4IP_0_0/HW4_system_HW4IP_0_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top HW4_system_HW4IP_0_0 -prefix
+//               HW4_system_HW4IP_0_0_ HW4_system_HW4IP_0_0_sim_netlist.v
 // Design      : HW4_system_HW4IP_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -12,495 +12,6 @@
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CHECK_LICENSE_TYPE = "HW4_system_HW4IP_0_0,HW4IP_v1_0,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* X_CORE_INFO = "HW4IP_v1_0,Vivado 2018.3" *) 
-(* NotValidForBitStream *)
-module HW4_system_HW4IP_0_0
-   (s00_axi_awaddr,
-    s00_axi_awprot,
-    s00_axi_awvalid,
-    s00_axi_awready,
-    s00_axi_wdata,
-    s00_axi_wstrb,
-    s00_axi_wvalid,
-    s00_axi_wready,
-    s00_axi_bresp,
-    s00_axi_bvalid,
-    s00_axi_bready,
-    s00_axi_araddr,
-    s00_axi_arprot,
-    s00_axi_arvalid,
-    s00_axi_arready,
-    s00_axi_rdata,
-    s00_axi_rresp,
-    s00_axi_rvalid,
-    s00_axi_rready,
-    s00_axi_aclk,
-    s00_axi_aresetn);
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI AWADDR" *) input [4:0]s00_axi_awaddr;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI AWPROT" *) input [2:0]s00_axi_awprot;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI AWVALID" *) input s00_axi_awvalid;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI AWREADY" *) output s00_axi_awready;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI WDATA" *) input [31:0]s00_axi_wdata;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI WSTRB" *) input [3:0]s00_axi_wstrb;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI WVALID" *) input s00_axi_wvalid;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI WREADY" *) output s00_axi_wready;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI BRESP" *) output [1:0]s00_axi_bresp;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI BVALID" *) output s00_axi_bvalid;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI BREADY" *) input s00_axi_bready;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI ARADDR" *) input [4:0]s00_axi_araddr;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI ARPROT" *) input [2:0]s00_axi_arprot;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI ARVALID" *) input s00_axi_arvalid;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI ARREADY" *) output s00_axi_arready;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI RDATA" *) output [31:0]s00_axi_rdata;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI RRESP" *) output [1:0]s00_axi_rresp;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI RVALID" *) output s00_axi_rvalid;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI RREADY" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME S00_AXI, WIZ_DATA_WIDTH 32, WIZ_NUM_REG 8, SUPPORTS_NARROW_BURST 0, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 62500000, ID_WIDTH 0, ADDR_WIDTH 5, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, NUM_READ_OUTSTANDING 8, NUM_WRITE_OUTSTANDING 8, MAX_BURST_LENGTH 1, PHASE 0.000, CLK_DOMAIN HW4_system_processing_system7_0_0_FCLK_CLK0, NUM_READ_THREADS 4, NUM_WRITE_THREADS 4, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0" *) input s00_axi_rready;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 S00_AXI_CLK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME S00_AXI_CLK, ASSOCIATED_BUSIF S00_AXI, ASSOCIATED_RESET s00_axi_aresetn, FREQ_HZ 62500000, PHASE 0.000, CLK_DOMAIN HW4_system_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0" *) input s00_axi_aclk;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 S00_AXI_RST RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME S00_AXI_RST, POLARITY ACTIVE_LOW, INSERT_VIP 0" *) input s00_axi_aresetn;
-
-  wire \<const0> ;
-  wire [11:8]\HW4IP_v1_0_S00_AXI_inst/u_hw2/u_vmm/wdata0 ;
-  wire inst_n_10;
-  wire inst_n_11;
-  wire inst_n_12;
-  wire inst_n_13;
-  wire inst_n_14;
-  wire inst_n_15;
-  wire inst_n_16;
-  wire inst_n_17;
-  wire inst_n_18;
-  wire inst_n_19;
-  wire inst_n_20;
-  wire inst_n_21;
-  wire inst_n_22;
-  wire inst_n_23;
-  wire inst_n_24;
-  wire inst_n_25;
-  wire inst_n_26;
-  wire inst_n_27;
-  wire inst_n_28;
-  wire inst_n_29;
-  wire inst_n_30;
-  wire inst_n_31;
-  wire inst_n_32;
-  wire inst_n_33;
-  wire inst_n_34;
-  wire inst_n_35;
-  wire inst_n_36;
-  wire inst_n_37;
-  wire inst_n_38;
-  wire inst_n_39;
-  wire inst_n_40;
-  wire inst_n_41;
-  wire inst_n_42;
-  wire inst_n_43;
-  wire inst_n_44;
-  wire inst_n_45;
-  wire inst_n_46;
-  wire inst_n_47;
-  wire inst_n_48;
-  wire inst_n_49;
-  wire inst_n_5;
-  wire inst_n_50;
-  wire inst_n_6;
-  wire inst_n_7;
-  wire inst_n_8;
-  wire inst_n_9;
-  wire s00_axi_aclk;
-  wire [4:0]s00_axi_araddr;
-  wire s00_axi_aresetn;
-  wire s00_axi_arready;
-  wire s00_axi_arvalid;
-  wire [4:0]s00_axi_awaddr;
-  wire s00_axi_awready;
-  wire s00_axi_awvalid;
-  wire s00_axi_bready;
-  wire s00_axi_bvalid;
-  wire [31:0]s00_axi_rdata;
-  wire s00_axi_rready;
-  wire s00_axi_rvalid;
-  wire [31:0]s00_axi_wdata;
-  wire s00_axi_wready;
-  wire [3:0]s00_axi_wstrb;
-  wire s00_axi_wvalid;
-  wire \wdata[11]_i_10_n_0 ;
-  wire \wdata[11]_i_17_n_0 ;
-  wire \wdata[11]_i_18_n_0 ;
-  wire \wdata[11]_i_19_n_0 ;
-  wire \wdata[11]_i_20_n_0 ;
-  wire \wdata[11]_i_21_n_0 ;
-  wire \wdata[11]_i_22_n_0 ;
-  wire \wdata[11]_i_23_n_0 ;
-  wire \wdata[11]_i_31_n_0 ;
-  wire \wdata[11]_i_32_n_0 ;
-  wire \wdata[11]_i_35_n_0 ;
-  wire \wdata[11]_i_36_n_0 ;
-  wire \wdata[11]_i_37_n_0 ;
-  wire \wdata[11]_i_38_n_0 ;
-  wire \wdata[11]_i_39_n_0 ;
-  wire \wdata[11]_i_40_n_0 ;
-  wire \wdata[11]_i_41_n_0 ;
-  wire \wdata[11]_i_42_n_0 ;
-  wire \wdata[11]_i_4_n_0 ;
-  wire \wdata[11]_i_5_n_0 ;
-  wire \wdata[11]_i_6_n_0 ;
-  wire \wdata[11]_i_7_n_0 ;
-  wire \wdata[11]_i_8_n_0 ;
-  wire \wdata[11]_i_9_n_0 ;
-  wire \wdata[7]_i_14_n_0 ;
-  wire \wdata[7]_i_15_n_0 ;
-  wire \wdata[7]_i_16_n_0 ;
-  wire \wdata[7]_i_17_n_0 ;
-  wire \wdata[7]_i_18_n_0 ;
-  wire \wdata[7]_i_19_n_0 ;
-  wire \wdata[7]_i_20_n_0 ;
-  wire \wdata_reg[11]_i_11_n_1 ;
-  wire \wdata_reg[11]_i_11_n_2 ;
-  wire \wdata_reg[11]_i_11_n_3 ;
-  wire \wdata_reg[11]_i_11_n_4 ;
-  wire \wdata_reg[11]_i_11_n_5 ;
-  wire \wdata_reg[11]_i_11_n_6 ;
-  wire \wdata_reg[11]_i_11_n_7 ;
-  wire \wdata_reg[11]_i_14_n_0 ;
-  wire \wdata_reg[11]_i_14_n_1 ;
-  wire \wdata_reg[11]_i_14_n_2 ;
-  wire \wdata_reg[11]_i_14_n_3 ;
-  wire \wdata_reg[11]_i_14_n_4 ;
-  wire \wdata_reg[11]_i_14_n_5 ;
-  wire \wdata_reg[11]_i_14_n_6 ;
-  wire \wdata_reg[11]_i_14_n_7 ;
-  wire \wdata_reg[11]_i_3_n_1 ;
-  wire \wdata_reg[11]_i_3_n_2 ;
-  wire \wdata_reg[11]_i_3_n_3 ;
-  wire \wdata_reg[7]_i_11_n_0 ;
-  wire \wdata_reg[7]_i_11_n_1 ;
-  wire \wdata_reg[7]_i_11_n_2 ;
-  wire \wdata_reg[7]_i_11_n_3 ;
-  wire \wdata_reg[7]_i_11_n_4 ;
-  wire \wdata_reg[7]_i_11_n_5 ;
-  wire \wdata_reg[7]_i_11_n_6 ;
-  wire \wdata_reg[7]_i_11_n_7 ;
-  wire [3:3]\NLW_wdata_reg[11]_i_11_CO_UNCONNECTED ;
-  wire [3:3]\NLW_wdata_reg[11]_i_3_CO_UNCONNECTED ;
-
-  assign s00_axi_bresp[1] = \<const0> ;
-  assign s00_axi_bresp[0] = \<const0> ;
-  assign s00_axi_rresp[1] = \<const0> ;
-  assign s00_axi_rresp[0] = \<const0> ;
-  GND GND
-       (.G(\<const0> ));
-  HW4_system_HW4IP_0_0_HW4IP_v1_0 inst
-       (.CO(inst_n_16),
-        .O(\HW4IP_v1_0_S00_AXI_inst/u_hw2/u_vmm/wdata0 ),
-        .S({\wdata[11]_i_31_n_0 ,\wdata[11]_i_32_n_0 }),
-        .axi_arready_reg(s00_axi_arready),
-        .axi_awready_reg(s00_axi_awready),
-        .axi_wready_reg(s00_axi_wready),
-        .s00_axi_aclk(s00_axi_aclk),
-        .s00_axi_araddr(s00_axi_araddr[4:2]),
-        .s00_axi_aresetn(s00_axi_aresetn),
-        .s00_axi_arvalid(s00_axi_arvalid),
-        .s00_axi_awaddr(s00_axi_awaddr[4:2]),
-        .s00_axi_awvalid(s00_axi_awvalid),
-        .s00_axi_bready(s00_axi_bready),
-        .s00_axi_bvalid(s00_axi_bvalid),
-        .s00_axi_rdata(s00_axi_rdata),
-        .s00_axi_rready(s00_axi_rready),
-        .s00_axi_rvalid(s00_axi_rvalid),
-        .s00_axi_wdata(s00_axi_wdata),
-        .s00_axi_wstrb(s00_axi_wstrb),
-        .s00_axi_wvalid(s00_axi_wvalid),
-        .\state_reg[0] (inst_n_45),
-        .\state_reg[2] ({inst_n_8,inst_n_9,inst_n_10,inst_n_11}),
-        .\state_reg[2]_0 ({inst_n_12,inst_n_13,inst_n_14,inst_n_15}),
-        .\state_reg[2]_1 ({inst_n_17,inst_n_18}),
-        .\state_reg[2]_10 (inst_n_41),
-        .\state_reg[2]_11 (inst_n_42),
-        .\state_reg[2]_12 ({inst_n_43,inst_n_44}),
-        .\state_reg[2]_2 ({inst_n_19,inst_n_20,inst_n_21,inst_n_22}),
-        .\state_reg[2]_3 ({inst_n_23,inst_n_24,inst_n_25,inst_n_26}),
-        .\state_reg[2]_4 (inst_n_27),
-        .\state_reg[2]_5 ({inst_n_28,inst_n_29}),
-        .\state_reg[2]_6 ({inst_n_30,inst_n_31,inst_n_32,inst_n_33}),
-        .\state_reg[2]_7 ({inst_n_34,inst_n_35,inst_n_36,inst_n_37}),
-        .\state_reg[2]_8 (inst_n_38),
-        .\state_reg[2]_9 ({inst_n_39,inst_n_40}),
-        .\wdata[7]_i_10 (inst_n_50),
-        .\wdata_reg[7]_i_2 ({\wdata_reg[7]_i_11_n_4 ,\wdata_reg[7]_i_11_n_5 ,\wdata_reg[7]_i_11_n_6 ,\wdata_reg[7]_i_11_n_7 }),
-        .\wdata_reg[7]_i_2_0 ({\wdata_reg[11]_i_14_n_4 ,\wdata_reg[11]_i_14_n_5 ,\wdata_reg[11]_i_14_n_6 ,\wdata_reg[11]_i_14_n_7 }),
-        .\wdata_reg[9] ({inst_n_5,inst_n_6,inst_n_7}),
-        .\wdata_reg[9]_0 ({inst_n_46,inst_n_47,inst_n_48,inst_n_49}));
-  LUT4 #(
-    .INIT(16'h6996)) 
-    \wdata[11]_i_10 
-       (.I0(\wdata_reg[11]_i_11_n_7 ),
-        .I1(inst_n_44),
-        .I2(inst_n_49),
-        .I3(\wdata[11]_i_6_n_0 ),
-        .O(\wdata[11]_i_10_n_0 ));
-  LUT3 #(
-    .INIT(8'hE8)) 
-    \wdata[11]_i_17 
-       (.I0(inst_n_39),
-        .I1(inst_n_17),
-        .I2(inst_n_28),
-        .O(\wdata[11]_i_17_n_0 ));
-  LUT3 #(
-    .INIT(8'hE8)) 
-    \wdata[11]_i_18 
-       (.I0(inst_n_40),
-        .I1(inst_n_18),
-        .I2(inst_n_29),
-        .O(\wdata[11]_i_18_n_0 ));
-  LUT3 #(
-    .INIT(8'hE8)) 
-    \wdata[11]_i_19 
-       (.I0(inst_n_34),
-        .I1(inst_n_12),
-        .I2(inst_n_23),
-        .O(\wdata[11]_i_19_n_0 ));
-  LUT3 #(
-    .INIT(8'h7E)) 
-    \wdata[11]_i_20 
-       (.I0(inst_n_27),
-        .I1(inst_n_38),
-        .I2(inst_n_16),
-        .O(\wdata[11]_i_20_n_0 ));
-  LUT6 #(
-    .INIT(64'hE81717E817E8E817)) 
-    \wdata[11]_i_21 
-       (.I0(inst_n_28),
-        .I1(inst_n_17),
-        .I2(inst_n_39),
-        .I3(inst_n_16),
-        .I4(inst_n_38),
-        .I5(inst_n_27),
-        .O(\wdata[11]_i_21_n_0 ));
-  LUT4 #(
-    .INIT(16'h6996)) 
-    \wdata[11]_i_22 
-       (.I0(\wdata[11]_i_18_n_0 ),
-        .I1(inst_n_39),
-        .I2(inst_n_17),
-        .I3(inst_n_28),
-        .O(\wdata[11]_i_22_n_0 ));
-  LUT4 #(
-    .INIT(16'h6996)) 
-    \wdata[11]_i_23 
-       (.I0(inst_n_40),
-        .I1(inst_n_18),
-        .I2(inst_n_29),
-        .I3(\wdata[11]_i_19_n_0 ),
-        .O(\wdata[11]_i_23_n_0 ));
-  LUT2 #(
-    .INIT(4'h9)) 
-    \wdata[11]_i_31 
-       (.I0(inst_n_6),
-        .I1(inst_n_5),
-        .O(\wdata[11]_i_31_n_0 ));
-  LUT2 #(
-    .INIT(4'h9)) 
-    \wdata[11]_i_32 
-       (.I0(inst_n_7),
-        .I1(inst_n_6),
-        .O(\wdata[11]_i_32_n_0 ));
-  LUT3 #(
-    .INIT(8'hE8)) 
-    \wdata[11]_i_35 
-       (.I0(inst_n_35),
-        .I1(inst_n_13),
-        .I2(inst_n_24),
-        .O(\wdata[11]_i_35_n_0 ));
-  LUT3 #(
-    .INIT(8'hE8)) 
-    \wdata[11]_i_36 
-       (.I0(inst_n_36),
-        .I1(inst_n_14),
-        .I2(inst_n_25),
-        .O(\wdata[11]_i_36_n_0 ));
-  LUT3 #(
-    .INIT(8'hE8)) 
-    \wdata[11]_i_37 
-       (.I0(inst_n_37),
-        .I1(inst_n_15),
-        .I2(inst_n_26),
-        .O(\wdata[11]_i_37_n_0 ));
-  (* HLUTNM = "lutpair8" *) 
-  LUT3 #(
-    .INIT(8'hE8)) 
-    \wdata[11]_i_38 
-       (.I0(inst_n_30),
-        .I1(inst_n_8),
-        .I2(inst_n_19),
-        .O(\wdata[11]_i_38_n_0 ));
-  LUT4 #(
-    .INIT(16'h6996)) 
-    \wdata[11]_i_39 
-       (.I0(inst_n_34),
-        .I1(inst_n_12),
-        .I2(inst_n_23),
-        .I3(\wdata[11]_i_35_n_0 ),
-        .O(\wdata[11]_i_39_n_0 ));
-  LUT3 #(
-    .INIT(8'hE8)) 
-    \wdata[11]_i_4 
-       (.I0(\wdata_reg[11]_i_11_n_6 ),
-        .I1(inst_n_43),
-        .I2(inst_n_48),
-        .O(\wdata[11]_i_4_n_0 ));
-  LUT4 #(
-    .INIT(16'h6996)) 
-    \wdata[11]_i_40 
-       (.I0(inst_n_35),
-        .I1(inst_n_13),
-        .I2(inst_n_24),
-        .I3(\wdata[11]_i_36_n_0 ),
-        .O(\wdata[11]_i_40_n_0 ));
-  LUT4 #(
-    .INIT(16'h6996)) 
-    \wdata[11]_i_41 
-       (.I0(inst_n_36),
-        .I1(inst_n_14),
-        .I2(inst_n_25),
-        .I3(\wdata[11]_i_37_n_0 ),
-        .O(\wdata[11]_i_41_n_0 ));
-  LUT4 #(
-    .INIT(16'h6996)) 
-    \wdata[11]_i_42 
-       (.I0(inst_n_37),
-        .I1(inst_n_15),
-        .I2(inst_n_26),
-        .I3(\wdata[11]_i_38_n_0 ),
-        .O(\wdata[11]_i_42_n_0 ));
-  LUT3 #(
-    .INIT(8'hE8)) 
-    \wdata[11]_i_5 
-       (.I0(\wdata_reg[11]_i_11_n_7 ),
-        .I1(inst_n_44),
-        .I2(inst_n_49),
-        .O(\wdata[11]_i_5_n_0 ));
-  LUT3 #(
-    .INIT(8'hE8)) 
-    \wdata[11]_i_6 
-       (.I0(\wdata_reg[11]_i_14_n_4 ),
-        .I1(inst_n_41),
-        .I2(inst_n_45),
-        .O(\wdata[11]_i_6_n_0 ));
-  LUT5 #(
-    .INIT(32'h96666669)) 
-    \wdata[11]_i_7 
-       (.I0(inst_n_46),
-        .I1(\wdata_reg[11]_i_11_n_4 ),
-        .I2(inst_n_47),
-        .I3(inst_n_42),
-        .I4(\wdata_reg[11]_i_11_n_5 ),
-        .O(\wdata[11]_i_7_n_0 ));
-  LUT4 #(
-    .INIT(16'h9669)) 
-    \wdata[11]_i_8 
-       (.I0(\wdata[11]_i_4_n_0 ),
-        .I1(inst_n_47),
-        .I2(inst_n_42),
-        .I3(\wdata_reg[11]_i_11_n_5 ),
-        .O(\wdata[11]_i_8_n_0 ));
-  LUT4 #(
-    .INIT(16'h6996)) 
-    \wdata[11]_i_9 
-       (.I0(\wdata_reg[11]_i_11_n_6 ),
-        .I1(inst_n_43),
-        .I2(inst_n_48),
-        .I3(\wdata[11]_i_5_n_0 ),
-        .O(\wdata[11]_i_9_n_0 ));
-  (* HLUTNM = "lutpair7" *) 
-  LUT3 #(
-    .INIT(8'hE8)) 
-    \wdata[7]_i_14 
-       (.I0(inst_n_31),
-        .I1(inst_n_9),
-        .I2(inst_n_20),
-        .O(\wdata[7]_i_14_n_0 ));
-  (* HLUTNM = "lutpair6" *) 
-  LUT3 #(
-    .INIT(8'hE8)) 
-    \wdata[7]_i_15 
-       (.I0(inst_n_32),
-        .I1(inst_n_10),
-        .I2(inst_n_21),
-        .O(\wdata[7]_i_15_n_0 ));
-  (* HLUTNM = "lutpair5" *) 
-  LUT3 #(
-    .INIT(8'hE8)) 
-    \wdata[7]_i_16 
-       (.I0(inst_n_11),
-        .I1(inst_n_33),
-        .I2(inst_n_22),
-        .O(\wdata[7]_i_16_n_0 ));
-  (* HLUTNM = "lutpair8" *) 
-  LUT4 #(
-    .INIT(16'h6996)) 
-    \wdata[7]_i_17 
-       (.I0(inst_n_30),
-        .I1(inst_n_8),
-        .I2(inst_n_19),
-        .I3(\wdata[7]_i_14_n_0 ),
-        .O(\wdata[7]_i_17_n_0 ));
-  (* HLUTNM = "lutpair7" *) 
-  LUT4 #(
-    .INIT(16'h6996)) 
-    \wdata[7]_i_18 
-       (.I0(inst_n_31),
-        .I1(inst_n_9),
-        .I2(inst_n_20),
-        .I3(\wdata[7]_i_15_n_0 ),
-        .O(\wdata[7]_i_18_n_0 ));
-  (* HLUTNM = "lutpair6" *) 
-  LUT4 #(
-    .INIT(16'h6996)) 
-    \wdata[7]_i_19 
-       (.I0(inst_n_32),
-        .I1(inst_n_10),
-        .I2(inst_n_21),
-        .I3(\wdata[7]_i_16_n_0 ),
-        .O(\wdata[7]_i_19_n_0 ));
-  (* HLUTNM = "lutpair5" *) 
-  LUT3 #(
-    .INIT(8'h96)) 
-    \wdata[7]_i_20 
-       (.I0(inst_n_11),
-        .I1(inst_n_33),
-        .I2(inst_n_22),
-        .O(\wdata[7]_i_20_n_0 ));
-  CARRY4 \wdata_reg[11]_i_11 
-       (.CI(\wdata_reg[11]_i_14_n_0 ),
-        .CO({\NLW_wdata_reg[11]_i_11_CO_UNCONNECTED [3],\wdata_reg[11]_i_11_n_1 ,\wdata_reg[11]_i_11_n_2 ,\wdata_reg[11]_i_11_n_3 }),
-        .CYINIT(1'b0),
-        .DI({1'b0,\wdata[11]_i_17_n_0 ,\wdata[11]_i_18_n_0 ,\wdata[11]_i_19_n_0 }),
-        .O({\wdata_reg[11]_i_11_n_4 ,\wdata_reg[11]_i_11_n_5 ,\wdata_reg[11]_i_11_n_6 ,\wdata_reg[11]_i_11_n_7 }),
-        .S({\wdata[11]_i_20_n_0 ,\wdata[11]_i_21_n_0 ,\wdata[11]_i_22_n_0 ,\wdata[11]_i_23_n_0 }));
-  CARRY4 \wdata_reg[11]_i_14 
-       (.CI(\wdata_reg[7]_i_11_n_0 ),
-        .CO({\wdata_reg[11]_i_14_n_0 ,\wdata_reg[11]_i_14_n_1 ,\wdata_reg[11]_i_14_n_2 ,\wdata_reg[11]_i_14_n_3 }),
-        .CYINIT(1'b0),
-        .DI({\wdata[11]_i_35_n_0 ,\wdata[11]_i_36_n_0 ,\wdata[11]_i_37_n_0 ,\wdata[11]_i_38_n_0 }),
-        .O({\wdata_reg[11]_i_14_n_4 ,\wdata_reg[11]_i_14_n_5 ,\wdata_reg[11]_i_14_n_6 ,\wdata_reg[11]_i_14_n_7 }),
-        .S({\wdata[11]_i_39_n_0 ,\wdata[11]_i_40_n_0 ,\wdata[11]_i_41_n_0 ,\wdata[11]_i_42_n_0 }));
-  CARRY4 \wdata_reg[11]_i_3 
-       (.CI(inst_n_50),
-        .CO({\NLW_wdata_reg[11]_i_3_CO_UNCONNECTED [3],\wdata_reg[11]_i_3_n_1 ,\wdata_reg[11]_i_3_n_2 ,\wdata_reg[11]_i_3_n_3 }),
-        .CYINIT(1'b0),
-        .DI({1'b0,\wdata[11]_i_4_n_0 ,\wdata[11]_i_5_n_0 ,\wdata[11]_i_6_n_0 }),
-        .O(\HW4IP_v1_0_S00_AXI_inst/u_hw2/u_vmm/wdata0 ),
-        .S({\wdata[11]_i_7_n_0 ,\wdata[11]_i_8_n_0 ,\wdata[11]_i_9_n_0 ,\wdata[11]_i_10_n_0 }));
-  CARRY4 \wdata_reg[7]_i_11 
-       (.CI(1'b0),
-        .CO({\wdata_reg[7]_i_11_n_0 ,\wdata_reg[7]_i_11_n_1 ,\wdata_reg[7]_i_11_n_2 ,\wdata_reg[7]_i_11_n_3 }),
-        .CYINIT(1'b0),
-        .DI({\wdata[7]_i_14_n_0 ,\wdata[7]_i_15_n_0 ,\wdata[7]_i_16_n_0 ,1'b0}),
-        .O({\wdata_reg[7]_i_11_n_4 ,\wdata_reg[7]_i_11_n_5 ,\wdata_reg[7]_i_11_n_6 ,\wdata_reg[7]_i_11_n_7 }),
-        .S({\wdata[7]_i_17_n_0 ,\wdata[7]_i_18_n_0 ,\wdata[7]_i_19_n_0 ,\wdata[7]_i_20_n_0 }));
-endmodule
-
-(* ORIG_REF_NAME = "HW4IP_v1_0" *) 
 module HW4_system_HW4IP_0_0_HW4IP_v1_0
    (axi_wready_reg,
     axi_awready_reg,
@@ -667,7 +178,6 @@ module HW4_system_HW4IP_0_0_HW4IP_v1_0
         .\wdata_reg[9]_0 (\wdata_reg[9]_0 ));
 endmodule
 
-(* ORIG_REF_NAME = "HW4IP_v1_0_S00_AXI" *) 
 module HW4_system_HW4IP_0_0_HW4IP_v1_0_S00_AXI
    (axi_wready_reg_0,
     axi_awready_reg_0,
@@ -3355,7 +2865,494 @@ module HW4_system_HW4IP_0_0_HW4IP_v1_0_S00_AXI
         .\wdata_reg[9]_0 (\wdata_reg[9]_0 ));
 endmodule
 
-(* ORIG_REF_NAME = "VMM" *) 
+(* CHECK_LICENSE_TYPE = "HW4_system_HW4IP_0_0,HW4IP_v1_0,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* X_CORE_INFO = "HW4IP_v1_0,Vivado 2018.3" *) 
+(* NotValidForBitStream *)
+module HW4_system_HW4IP_0_0
+   (s00_axi_awaddr,
+    s00_axi_awprot,
+    s00_axi_awvalid,
+    s00_axi_awready,
+    s00_axi_wdata,
+    s00_axi_wstrb,
+    s00_axi_wvalid,
+    s00_axi_wready,
+    s00_axi_bresp,
+    s00_axi_bvalid,
+    s00_axi_bready,
+    s00_axi_araddr,
+    s00_axi_arprot,
+    s00_axi_arvalid,
+    s00_axi_arready,
+    s00_axi_rdata,
+    s00_axi_rresp,
+    s00_axi_rvalid,
+    s00_axi_rready,
+    s00_axi_aclk,
+    s00_axi_aresetn);
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI AWADDR" *) input [4:0]s00_axi_awaddr;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI AWPROT" *) input [2:0]s00_axi_awprot;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI AWVALID" *) input s00_axi_awvalid;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI AWREADY" *) output s00_axi_awready;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI WDATA" *) input [31:0]s00_axi_wdata;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI WSTRB" *) input [3:0]s00_axi_wstrb;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI WVALID" *) input s00_axi_wvalid;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI WREADY" *) output s00_axi_wready;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI BRESP" *) output [1:0]s00_axi_bresp;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI BVALID" *) output s00_axi_bvalid;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI BREADY" *) input s00_axi_bready;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI ARADDR" *) input [4:0]s00_axi_araddr;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI ARPROT" *) input [2:0]s00_axi_arprot;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI ARVALID" *) input s00_axi_arvalid;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI ARREADY" *) output s00_axi_arready;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI RDATA" *) output [31:0]s00_axi_rdata;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI RRESP" *) output [1:0]s00_axi_rresp;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI RVALID" *) output s00_axi_rvalid;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI RREADY" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME S00_AXI, WIZ_DATA_WIDTH 32, WIZ_NUM_REG 8, SUPPORTS_NARROW_BURST 0, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 62500000, ID_WIDTH 0, ADDR_WIDTH 5, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, NUM_READ_OUTSTANDING 8, NUM_WRITE_OUTSTANDING 8, MAX_BURST_LENGTH 1, PHASE 0.000, CLK_DOMAIN HW4_system_processing_system7_0_0_FCLK_CLK0, NUM_READ_THREADS 4, NUM_WRITE_THREADS 4, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0" *) input s00_axi_rready;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 S00_AXI_CLK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME S00_AXI_CLK, ASSOCIATED_BUSIF S00_AXI, ASSOCIATED_RESET s00_axi_aresetn, FREQ_HZ 62500000, PHASE 0.000, CLK_DOMAIN HW4_system_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0" *) input s00_axi_aclk;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 S00_AXI_RST RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME S00_AXI_RST, POLARITY ACTIVE_LOW, INSERT_VIP 0" *) input s00_axi_aresetn;
+
+  wire \<const0> ;
+  wire [11:8]\HW4IP_v1_0_S00_AXI_inst/u_hw2/u_vmm/wdata0 ;
+  wire inst_n_10;
+  wire inst_n_11;
+  wire inst_n_12;
+  wire inst_n_13;
+  wire inst_n_14;
+  wire inst_n_15;
+  wire inst_n_16;
+  wire inst_n_17;
+  wire inst_n_18;
+  wire inst_n_19;
+  wire inst_n_20;
+  wire inst_n_21;
+  wire inst_n_22;
+  wire inst_n_23;
+  wire inst_n_24;
+  wire inst_n_25;
+  wire inst_n_26;
+  wire inst_n_27;
+  wire inst_n_28;
+  wire inst_n_29;
+  wire inst_n_30;
+  wire inst_n_31;
+  wire inst_n_32;
+  wire inst_n_33;
+  wire inst_n_34;
+  wire inst_n_35;
+  wire inst_n_36;
+  wire inst_n_37;
+  wire inst_n_38;
+  wire inst_n_39;
+  wire inst_n_40;
+  wire inst_n_41;
+  wire inst_n_42;
+  wire inst_n_43;
+  wire inst_n_44;
+  wire inst_n_45;
+  wire inst_n_46;
+  wire inst_n_47;
+  wire inst_n_48;
+  wire inst_n_49;
+  wire inst_n_5;
+  wire inst_n_50;
+  wire inst_n_6;
+  wire inst_n_7;
+  wire inst_n_8;
+  wire inst_n_9;
+  wire s00_axi_aclk;
+  wire [4:0]s00_axi_araddr;
+  wire s00_axi_aresetn;
+  wire s00_axi_arready;
+  wire s00_axi_arvalid;
+  wire [4:0]s00_axi_awaddr;
+  wire s00_axi_awready;
+  wire s00_axi_awvalid;
+  wire s00_axi_bready;
+  wire s00_axi_bvalid;
+  wire [31:0]s00_axi_rdata;
+  wire s00_axi_rready;
+  wire s00_axi_rvalid;
+  wire [31:0]s00_axi_wdata;
+  wire s00_axi_wready;
+  wire [3:0]s00_axi_wstrb;
+  wire s00_axi_wvalid;
+  wire \wdata[11]_i_10_n_0 ;
+  wire \wdata[11]_i_17_n_0 ;
+  wire \wdata[11]_i_18_n_0 ;
+  wire \wdata[11]_i_19_n_0 ;
+  wire \wdata[11]_i_20_n_0 ;
+  wire \wdata[11]_i_21_n_0 ;
+  wire \wdata[11]_i_22_n_0 ;
+  wire \wdata[11]_i_23_n_0 ;
+  wire \wdata[11]_i_31_n_0 ;
+  wire \wdata[11]_i_32_n_0 ;
+  wire \wdata[11]_i_35_n_0 ;
+  wire \wdata[11]_i_36_n_0 ;
+  wire \wdata[11]_i_37_n_0 ;
+  wire \wdata[11]_i_38_n_0 ;
+  wire \wdata[11]_i_39_n_0 ;
+  wire \wdata[11]_i_40_n_0 ;
+  wire \wdata[11]_i_41_n_0 ;
+  wire \wdata[11]_i_42_n_0 ;
+  wire \wdata[11]_i_4_n_0 ;
+  wire \wdata[11]_i_5_n_0 ;
+  wire \wdata[11]_i_6_n_0 ;
+  wire \wdata[11]_i_7_n_0 ;
+  wire \wdata[11]_i_8_n_0 ;
+  wire \wdata[11]_i_9_n_0 ;
+  wire \wdata[7]_i_14_n_0 ;
+  wire \wdata[7]_i_15_n_0 ;
+  wire \wdata[7]_i_16_n_0 ;
+  wire \wdata[7]_i_17_n_0 ;
+  wire \wdata[7]_i_18_n_0 ;
+  wire \wdata[7]_i_19_n_0 ;
+  wire \wdata[7]_i_20_n_0 ;
+  wire \wdata_reg[11]_i_11_n_1 ;
+  wire \wdata_reg[11]_i_11_n_2 ;
+  wire \wdata_reg[11]_i_11_n_3 ;
+  wire \wdata_reg[11]_i_11_n_4 ;
+  wire \wdata_reg[11]_i_11_n_5 ;
+  wire \wdata_reg[11]_i_11_n_6 ;
+  wire \wdata_reg[11]_i_11_n_7 ;
+  wire \wdata_reg[11]_i_14_n_0 ;
+  wire \wdata_reg[11]_i_14_n_1 ;
+  wire \wdata_reg[11]_i_14_n_2 ;
+  wire \wdata_reg[11]_i_14_n_3 ;
+  wire \wdata_reg[11]_i_14_n_4 ;
+  wire \wdata_reg[11]_i_14_n_5 ;
+  wire \wdata_reg[11]_i_14_n_6 ;
+  wire \wdata_reg[11]_i_14_n_7 ;
+  wire \wdata_reg[11]_i_3_n_1 ;
+  wire \wdata_reg[11]_i_3_n_2 ;
+  wire \wdata_reg[11]_i_3_n_3 ;
+  wire \wdata_reg[7]_i_11_n_0 ;
+  wire \wdata_reg[7]_i_11_n_1 ;
+  wire \wdata_reg[7]_i_11_n_2 ;
+  wire \wdata_reg[7]_i_11_n_3 ;
+  wire \wdata_reg[7]_i_11_n_4 ;
+  wire \wdata_reg[7]_i_11_n_5 ;
+  wire \wdata_reg[7]_i_11_n_6 ;
+  wire \wdata_reg[7]_i_11_n_7 ;
+  wire [3:3]\NLW_wdata_reg[11]_i_11_CO_UNCONNECTED ;
+  wire [3:3]\NLW_wdata_reg[11]_i_3_CO_UNCONNECTED ;
+
+  assign s00_axi_bresp[1] = \<const0> ;
+  assign s00_axi_bresp[0] = \<const0> ;
+  assign s00_axi_rresp[1] = \<const0> ;
+  assign s00_axi_rresp[0] = \<const0> ;
+  GND GND
+       (.G(\<const0> ));
+  HW4_system_HW4IP_0_0_HW4IP_v1_0 inst
+       (.CO(inst_n_16),
+        .O(\HW4IP_v1_0_S00_AXI_inst/u_hw2/u_vmm/wdata0 ),
+        .S({\wdata[11]_i_31_n_0 ,\wdata[11]_i_32_n_0 }),
+        .axi_arready_reg(s00_axi_arready),
+        .axi_awready_reg(s00_axi_awready),
+        .axi_wready_reg(s00_axi_wready),
+        .s00_axi_aclk(s00_axi_aclk),
+        .s00_axi_araddr(s00_axi_araddr[4:2]),
+        .s00_axi_aresetn(s00_axi_aresetn),
+        .s00_axi_arvalid(s00_axi_arvalid),
+        .s00_axi_awaddr(s00_axi_awaddr[4:2]),
+        .s00_axi_awvalid(s00_axi_awvalid),
+        .s00_axi_bready(s00_axi_bready),
+        .s00_axi_bvalid(s00_axi_bvalid),
+        .s00_axi_rdata(s00_axi_rdata),
+        .s00_axi_rready(s00_axi_rready),
+        .s00_axi_rvalid(s00_axi_rvalid),
+        .s00_axi_wdata(s00_axi_wdata),
+        .s00_axi_wstrb(s00_axi_wstrb),
+        .s00_axi_wvalid(s00_axi_wvalid),
+        .\state_reg[0] (inst_n_45),
+        .\state_reg[2] ({inst_n_8,inst_n_9,inst_n_10,inst_n_11}),
+        .\state_reg[2]_0 ({inst_n_12,inst_n_13,inst_n_14,inst_n_15}),
+        .\state_reg[2]_1 ({inst_n_17,inst_n_18}),
+        .\state_reg[2]_10 (inst_n_41),
+        .\state_reg[2]_11 (inst_n_42),
+        .\state_reg[2]_12 ({inst_n_43,inst_n_44}),
+        .\state_reg[2]_2 ({inst_n_19,inst_n_20,inst_n_21,inst_n_22}),
+        .\state_reg[2]_3 ({inst_n_23,inst_n_24,inst_n_25,inst_n_26}),
+        .\state_reg[2]_4 (inst_n_27),
+        .\state_reg[2]_5 ({inst_n_28,inst_n_29}),
+        .\state_reg[2]_6 ({inst_n_30,inst_n_31,inst_n_32,inst_n_33}),
+        .\state_reg[2]_7 ({inst_n_34,inst_n_35,inst_n_36,inst_n_37}),
+        .\state_reg[2]_8 (inst_n_38),
+        .\state_reg[2]_9 ({inst_n_39,inst_n_40}),
+        .\wdata[7]_i_10 (inst_n_50),
+        .\wdata_reg[7]_i_2 ({\wdata_reg[7]_i_11_n_4 ,\wdata_reg[7]_i_11_n_5 ,\wdata_reg[7]_i_11_n_6 ,\wdata_reg[7]_i_11_n_7 }),
+        .\wdata_reg[7]_i_2_0 ({\wdata_reg[11]_i_14_n_4 ,\wdata_reg[11]_i_14_n_5 ,\wdata_reg[11]_i_14_n_6 ,\wdata_reg[11]_i_14_n_7 }),
+        .\wdata_reg[9] ({inst_n_5,inst_n_6,inst_n_7}),
+        .\wdata_reg[9]_0 ({inst_n_46,inst_n_47,inst_n_48,inst_n_49}));
+  LUT4 #(
+    .INIT(16'h6996)) 
+    \wdata[11]_i_10 
+       (.I0(\wdata_reg[11]_i_11_n_7 ),
+        .I1(inst_n_44),
+        .I2(inst_n_49),
+        .I3(\wdata[11]_i_6_n_0 ),
+        .O(\wdata[11]_i_10_n_0 ));
+  LUT3 #(
+    .INIT(8'hE8)) 
+    \wdata[11]_i_17 
+       (.I0(inst_n_39),
+        .I1(inst_n_17),
+        .I2(inst_n_28),
+        .O(\wdata[11]_i_17_n_0 ));
+  LUT3 #(
+    .INIT(8'hE8)) 
+    \wdata[11]_i_18 
+       (.I0(inst_n_40),
+        .I1(inst_n_18),
+        .I2(inst_n_29),
+        .O(\wdata[11]_i_18_n_0 ));
+  LUT3 #(
+    .INIT(8'hE8)) 
+    \wdata[11]_i_19 
+       (.I0(inst_n_34),
+        .I1(inst_n_12),
+        .I2(inst_n_23),
+        .O(\wdata[11]_i_19_n_0 ));
+  LUT3 #(
+    .INIT(8'h7E)) 
+    \wdata[11]_i_20 
+       (.I0(inst_n_27),
+        .I1(inst_n_38),
+        .I2(inst_n_16),
+        .O(\wdata[11]_i_20_n_0 ));
+  LUT6 #(
+    .INIT(64'hE81717E817E8E817)) 
+    \wdata[11]_i_21 
+       (.I0(inst_n_28),
+        .I1(inst_n_17),
+        .I2(inst_n_39),
+        .I3(inst_n_16),
+        .I4(inst_n_38),
+        .I5(inst_n_27),
+        .O(\wdata[11]_i_21_n_0 ));
+  LUT4 #(
+    .INIT(16'h6996)) 
+    \wdata[11]_i_22 
+       (.I0(\wdata[11]_i_18_n_0 ),
+        .I1(inst_n_39),
+        .I2(inst_n_17),
+        .I3(inst_n_28),
+        .O(\wdata[11]_i_22_n_0 ));
+  LUT4 #(
+    .INIT(16'h6996)) 
+    \wdata[11]_i_23 
+       (.I0(inst_n_40),
+        .I1(inst_n_18),
+        .I2(inst_n_29),
+        .I3(\wdata[11]_i_19_n_0 ),
+        .O(\wdata[11]_i_23_n_0 ));
+  LUT2 #(
+    .INIT(4'h9)) 
+    \wdata[11]_i_31 
+       (.I0(inst_n_6),
+        .I1(inst_n_5),
+        .O(\wdata[11]_i_31_n_0 ));
+  LUT2 #(
+    .INIT(4'h9)) 
+    \wdata[11]_i_32 
+       (.I0(inst_n_7),
+        .I1(inst_n_6),
+        .O(\wdata[11]_i_32_n_0 ));
+  LUT3 #(
+    .INIT(8'hE8)) 
+    \wdata[11]_i_35 
+       (.I0(inst_n_35),
+        .I1(inst_n_13),
+        .I2(inst_n_24),
+        .O(\wdata[11]_i_35_n_0 ));
+  LUT3 #(
+    .INIT(8'hE8)) 
+    \wdata[11]_i_36 
+       (.I0(inst_n_36),
+        .I1(inst_n_14),
+        .I2(inst_n_25),
+        .O(\wdata[11]_i_36_n_0 ));
+  LUT3 #(
+    .INIT(8'hE8)) 
+    \wdata[11]_i_37 
+       (.I0(inst_n_37),
+        .I1(inst_n_15),
+        .I2(inst_n_26),
+        .O(\wdata[11]_i_37_n_0 ));
+  (* HLUTNM = "lutpair8" *) 
+  LUT3 #(
+    .INIT(8'hE8)) 
+    \wdata[11]_i_38 
+       (.I0(inst_n_30),
+        .I1(inst_n_8),
+        .I2(inst_n_19),
+        .O(\wdata[11]_i_38_n_0 ));
+  LUT4 #(
+    .INIT(16'h6996)) 
+    \wdata[11]_i_39 
+       (.I0(inst_n_34),
+        .I1(inst_n_12),
+        .I2(inst_n_23),
+        .I3(\wdata[11]_i_35_n_0 ),
+        .O(\wdata[11]_i_39_n_0 ));
+  LUT3 #(
+    .INIT(8'hE8)) 
+    \wdata[11]_i_4 
+       (.I0(\wdata_reg[11]_i_11_n_6 ),
+        .I1(inst_n_43),
+        .I2(inst_n_48),
+        .O(\wdata[11]_i_4_n_0 ));
+  LUT4 #(
+    .INIT(16'h6996)) 
+    \wdata[11]_i_40 
+       (.I0(inst_n_35),
+        .I1(inst_n_13),
+        .I2(inst_n_24),
+        .I3(\wdata[11]_i_36_n_0 ),
+        .O(\wdata[11]_i_40_n_0 ));
+  LUT4 #(
+    .INIT(16'h6996)) 
+    \wdata[11]_i_41 
+       (.I0(inst_n_36),
+        .I1(inst_n_14),
+        .I2(inst_n_25),
+        .I3(\wdata[11]_i_37_n_0 ),
+        .O(\wdata[11]_i_41_n_0 ));
+  LUT4 #(
+    .INIT(16'h6996)) 
+    \wdata[11]_i_42 
+       (.I0(inst_n_37),
+        .I1(inst_n_15),
+        .I2(inst_n_26),
+        .I3(\wdata[11]_i_38_n_0 ),
+        .O(\wdata[11]_i_42_n_0 ));
+  LUT3 #(
+    .INIT(8'hE8)) 
+    \wdata[11]_i_5 
+       (.I0(\wdata_reg[11]_i_11_n_7 ),
+        .I1(inst_n_44),
+        .I2(inst_n_49),
+        .O(\wdata[11]_i_5_n_0 ));
+  LUT3 #(
+    .INIT(8'hE8)) 
+    \wdata[11]_i_6 
+       (.I0(\wdata_reg[11]_i_14_n_4 ),
+        .I1(inst_n_41),
+        .I2(inst_n_45),
+        .O(\wdata[11]_i_6_n_0 ));
+  LUT5 #(
+    .INIT(32'h96666669)) 
+    \wdata[11]_i_7 
+       (.I0(inst_n_46),
+        .I1(\wdata_reg[11]_i_11_n_4 ),
+        .I2(inst_n_47),
+        .I3(inst_n_42),
+        .I4(\wdata_reg[11]_i_11_n_5 ),
+        .O(\wdata[11]_i_7_n_0 ));
+  LUT4 #(
+    .INIT(16'h9669)) 
+    \wdata[11]_i_8 
+       (.I0(\wdata[11]_i_4_n_0 ),
+        .I1(inst_n_47),
+        .I2(inst_n_42),
+        .I3(\wdata_reg[11]_i_11_n_5 ),
+        .O(\wdata[11]_i_8_n_0 ));
+  LUT4 #(
+    .INIT(16'h6996)) 
+    \wdata[11]_i_9 
+       (.I0(\wdata_reg[11]_i_11_n_6 ),
+        .I1(inst_n_43),
+        .I2(inst_n_48),
+        .I3(\wdata[11]_i_5_n_0 ),
+        .O(\wdata[11]_i_9_n_0 ));
+  (* HLUTNM = "lutpair7" *) 
+  LUT3 #(
+    .INIT(8'hE8)) 
+    \wdata[7]_i_14 
+       (.I0(inst_n_31),
+        .I1(inst_n_9),
+        .I2(inst_n_20),
+        .O(\wdata[7]_i_14_n_0 ));
+  (* HLUTNM = "lutpair6" *) 
+  LUT3 #(
+    .INIT(8'hE8)) 
+    \wdata[7]_i_15 
+       (.I0(inst_n_32),
+        .I1(inst_n_10),
+        .I2(inst_n_21),
+        .O(\wdata[7]_i_15_n_0 ));
+  (* HLUTNM = "lutpair5" *) 
+  LUT3 #(
+    .INIT(8'hE8)) 
+    \wdata[7]_i_16 
+       (.I0(inst_n_11),
+        .I1(inst_n_33),
+        .I2(inst_n_22),
+        .O(\wdata[7]_i_16_n_0 ));
+  (* HLUTNM = "lutpair8" *) 
+  LUT4 #(
+    .INIT(16'h6996)) 
+    \wdata[7]_i_17 
+       (.I0(inst_n_30),
+        .I1(inst_n_8),
+        .I2(inst_n_19),
+        .I3(\wdata[7]_i_14_n_0 ),
+        .O(\wdata[7]_i_17_n_0 ));
+  (* HLUTNM = "lutpair7" *) 
+  LUT4 #(
+    .INIT(16'h6996)) 
+    \wdata[7]_i_18 
+       (.I0(inst_n_31),
+        .I1(inst_n_9),
+        .I2(inst_n_20),
+        .I3(\wdata[7]_i_15_n_0 ),
+        .O(\wdata[7]_i_18_n_0 ));
+  (* HLUTNM = "lutpair6" *) 
+  LUT4 #(
+    .INIT(16'h6996)) 
+    \wdata[7]_i_19 
+       (.I0(inst_n_32),
+        .I1(inst_n_10),
+        .I2(inst_n_21),
+        .I3(\wdata[7]_i_16_n_0 ),
+        .O(\wdata[7]_i_19_n_0 ));
+  (* HLUTNM = "lutpair5" *) 
+  LUT3 #(
+    .INIT(8'h96)) 
+    \wdata[7]_i_20 
+       (.I0(inst_n_11),
+        .I1(inst_n_33),
+        .I2(inst_n_22),
+        .O(\wdata[7]_i_20_n_0 ));
+  CARRY4 \wdata_reg[11]_i_11 
+       (.CI(\wdata_reg[11]_i_14_n_0 ),
+        .CO({\NLW_wdata_reg[11]_i_11_CO_UNCONNECTED [3],\wdata_reg[11]_i_11_n_1 ,\wdata_reg[11]_i_11_n_2 ,\wdata_reg[11]_i_11_n_3 }),
+        .CYINIT(1'b0),
+        .DI({1'b0,\wdata[11]_i_17_n_0 ,\wdata[11]_i_18_n_0 ,\wdata[11]_i_19_n_0 }),
+        .O({\wdata_reg[11]_i_11_n_4 ,\wdata_reg[11]_i_11_n_5 ,\wdata_reg[11]_i_11_n_6 ,\wdata_reg[11]_i_11_n_7 }),
+        .S({\wdata[11]_i_20_n_0 ,\wdata[11]_i_21_n_0 ,\wdata[11]_i_22_n_0 ,\wdata[11]_i_23_n_0 }));
+  CARRY4 \wdata_reg[11]_i_14 
+       (.CI(\wdata_reg[7]_i_11_n_0 ),
+        .CO({\wdata_reg[11]_i_14_n_0 ,\wdata_reg[11]_i_14_n_1 ,\wdata_reg[11]_i_14_n_2 ,\wdata_reg[11]_i_14_n_3 }),
+        .CYINIT(1'b0),
+        .DI({\wdata[11]_i_35_n_0 ,\wdata[11]_i_36_n_0 ,\wdata[11]_i_37_n_0 ,\wdata[11]_i_38_n_0 }),
+        .O({\wdata_reg[11]_i_14_n_4 ,\wdata_reg[11]_i_14_n_5 ,\wdata_reg[11]_i_14_n_6 ,\wdata_reg[11]_i_14_n_7 }),
+        .S({\wdata[11]_i_39_n_0 ,\wdata[11]_i_40_n_0 ,\wdata[11]_i_41_n_0 ,\wdata[11]_i_42_n_0 }));
+  CARRY4 \wdata_reg[11]_i_3 
+       (.CI(inst_n_50),
+        .CO({\NLW_wdata_reg[11]_i_3_CO_UNCONNECTED [3],\wdata_reg[11]_i_3_n_1 ,\wdata_reg[11]_i_3_n_2 ,\wdata_reg[11]_i_3_n_3 }),
+        .CYINIT(1'b0),
+        .DI({1'b0,\wdata[11]_i_4_n_0 ,\wdata[11]_i_5_n_0 ,\wdata[11]_i_6_n_0 }),
+        .O(\HW4IP_v1_0_S00_AXI_inst/u_hw2/u_vmm/wdata0 ),
+        .S({\wdata[11]_i_7_n_0 ,\wdata[11]_i_8_n_0 ,\wdata[11]_i_9_n_0 ,\wdata[11]_i_10_n_0 }));
+  CARRY4 \wdata_reg[7]_i_11 
+       (.CI(1'b0),
+        .CO({\wdata_reg[7]_i_11_n_0 ,\wdata_reg[7]_i_11_n_1 ,\wdata_reg[7]_i_11_n_2 ,\wdata_reg[7]_i_11_n_3 }),
+        .CYINIT(1'b0),
+        .DI({\wdata[7]_i_14_n_0 ,\wdata[7]_i_15_n_0 ,\wdata[7]_i_16_n_0 ,1'b0}),
+        .O({\wdata_reg[7]_i_11_n_4 ,\wdata_reg[7]_i_11_n_5 ,\wdata_reg[7]_i_11_n_6 ,\wdata_reg[7]_i_11_n_7 }),
+        .S({\wdata[7]_i_17_n_0 ,\wdata[7]_i_18_n_0 ,\wdata[7]_i_19_n_0 ,\wdata[7]_i_20_n_0 }));
+endmodule
+
 module HW4_system_HW4IP_0_0_VMM
    (Q,
     \vec_reg[6][0]_0 ,
@@ -16266,7 +16263,6 @@ module HW4_system_HW4IP_0_0_VMM
         .Q(\wdata_reg[11]_0 [9]));
 endmodule
 
-(* ORIG_REF_NAME = "hw2" *) 
 module HW4_system_HW4IP_0_0_hw2
    (AR,
     \wdata_reg[9] ,
@@ -16980,7 +16976,6 @@ module HW4_system_HW4IP_0_0_hw2
         .\wdata_reg[9]_1 (\wdata_reg[9]_0 ));
 endmodule
 
-(* ORIG_REF_NAME = "sram" *) 
 module HW4_system_HW4IP_0_0_sram
    (data_o,
     RAM_reg_0_0,
