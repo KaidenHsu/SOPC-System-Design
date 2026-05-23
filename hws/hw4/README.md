@@ -39,7 +39,16 @@ Base Address: `0x43c0000`
 <img src="images/VMM.png" alt="VMM" width="500" align="middle" />
 ▲ VMM module Block Diagram
 
-## 4. SDK Execution
+## 4. Sythesis and Implementation
+
+### timing
+
+<img src="images/timing.png" alt="timing" width="360" align="middle" />
+
+### utilization
+<img src="images/utilization.png" alt="utilization" width="480" align="middle" />
+
+## 5. SDK Execution
 
 ``` C
 // ...
@@ -147,5 +156,5 @@ int main() {
 }
 ```
 
-<img src="images/demo.png" alt="demo" width="420" align="middle" />
+<img src="images/demo.png" alt="demo" width="360" align="middle" />
 ▲ SDK Execution Result
