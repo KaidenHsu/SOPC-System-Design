@@ -1,4 +1,4 @@
-# Lab 2.2 Calculator AXI-Lite Slave IP System
+# Lab 2.1 Calculator AXI-Lite Slave IP System
 
 ## 1. Steps
 
